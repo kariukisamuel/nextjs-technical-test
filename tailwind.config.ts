@@ -16,6 +16,11 @@ const config: Config = {
       xxl: '1536px'
     },
     extend: {
+      fontFamily: {
+         montserrat:['var(--font-montserrat)'],
+         roboto:['var(--font-roboto)'],
+      },
+
 
     },
   },
