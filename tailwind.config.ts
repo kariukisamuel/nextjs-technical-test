@@ -8,24 +8,22 @@ const config: Config = {
   ],
   theme: {
     screens: {
-      xs: '320px',
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
-      xxl: '1536px'
+      xs: "320px",
+      sm: "480px",
+      md: "768px",
+      lg: "976px",
+      xl: "1440px",
+      xxl: "1536px",
     },
     extend: {
       fontFamily: {
-         montserrat:['var(--font-montserrat)'],
-         roboto:['var(--font-roboto)'],
+        montserrat: ["var(--font-montserrat)"],
+        roboto: ["var(--font-roboto)"],
       },
-      colors:{
-         blazingRed:'#FF4E50',
-         lightAlmond:'#F7F3F2'
-      }
-
-
+      colors: {
+        blazingRed: "#FF4E50",
+        lightAlmond: "#F7F3F2",
+      },
     },
   },
   plugins: [],

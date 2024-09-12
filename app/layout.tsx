@@ -1,7 +1,7 @@
 // import metadata type
 import type { Metadata } from "next";
 //import fonts from utils file
-import { montserrat,roboto } from "./utils/fonts";
+import { montserrat, roboto } from "./utils/fonts";
 //import global css
 import "./globals.css";
 
@@ -18,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`w-full h-screen bg-white overflow-hiddden ${montserrat} ${roboto}`}>
+      <body
+        className={`w-full h-screen bg-white overflow-hiddden ${montserrat} ${roboto}`}
+      >
         {children}
       </body>
     </html>
