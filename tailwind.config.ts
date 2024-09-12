@@ -23,6 +23,7 @@ const config: Config = {
       colors: {
         blazingRed: "#FF4E50",
         lightAlmond: "#F7F3F2",
+        blazingYellow: "#F9D423",
       },
     },
   },
