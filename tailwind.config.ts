@@ -20,6 +20,10 @@ const config: Config = {
          montserrat:['var(--font-montserrat)'],
          roboto:['var(--font-roboto)'],
       },
+      colors:{
+         blazingRed:'#FF4E50',
+         lightAlmond:'#F7F3F2'
+      }
 
 
     },
