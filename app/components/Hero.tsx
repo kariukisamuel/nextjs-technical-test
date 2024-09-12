@@ -7,7 +7,7 @@ export default function HeroSection() {
            <header className="z-10 relative w-full flex justify-center ">
             <div className="flex w-4/6 justify-between mt-10 align-baseline">
                 <div className="logo">
-                    <h3 className="font-montserrat font-bold uppercase text-xl">Dreamtech</h3>
+                    <h3 className="font-montserrat font-bold uppercase text-xl">Dreamshare</h3>
                 </div>
 
                 <nav>
