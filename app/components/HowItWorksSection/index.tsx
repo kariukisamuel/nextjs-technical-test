@@ -1,5 +1,4 @@
 import StepCard from "./StepCard";
-import Image from "next/image";
 
 type title = {
   title: string;
