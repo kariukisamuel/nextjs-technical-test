@@ -1,5 +1,5 @@
 import Header from "./components/Layout/Header";
-import HeroSection from "./components/Home/Hero";
+import Hero from "./components/Home/Hero";
 import HowItWorks from "./components/Home/HowItWorks";
 import Partners from "./components/Home/Partners";
 import HolidayActivity from "./components/Home/HolidayActivity";
@@ -11,8 +11,8 @@ export default function Home() {
     // Set a maximum width for the parent container to prevent elements from expanding beyond 1440px
     <div className="max-w-{1440}">
       <Header />
-      <main>
-        <HeroSection />
+      <main className="relative">
+        <Hero />
         <HowItWorks title="How Dreamshare works?" />
         <Partners title="Meet a partner for your best holiday" />
         <HolidayActivity title="Discover holiday activity ideas" />
