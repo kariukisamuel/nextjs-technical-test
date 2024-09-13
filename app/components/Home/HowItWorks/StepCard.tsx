@@ -5,12 +5,12 @@ type StepCardProps = {
   title: string;
   description: string;
 };
-export default function StepCard({
+const StepCard = ({
   imageUrl,
   stepNumber = 1,
   title,
   description,
-}: StepCardProps) {
+}: StepCardProps) => {
   return (
     <div className=" w-full md:w-[31.5%] relative bg-gradient-to-tr from-blazingRed to-blazingYellow h-[400px]  rounded-lg overflow-hidden mb-10">
       <Image
@@ -38,4 +38,5 @@ export default function StepCard({
       </div>
     </div>
   );
-}
+};
+export default StepCard;

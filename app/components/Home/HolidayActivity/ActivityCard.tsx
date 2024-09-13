@@ -4,17 +4,12 @@ type ActivityCardProps = {
   image: string;
   title: string;
 };
-export default function ActivityCard({
-  width,
-  image,
-  title,
-}: ActivityCardProps) {
+const ActivityCard = ({ width, image, title }: ActivityCardProps) => {
   return (
     <div
       className={`w-full md:w-[${width}] relative bg-gradient-to-tr from-blazingRed to-blazingYellow h-[300px] rounded-lg overflow-hidden mb-5`}
     >
       <Image
-        // src="/images/activities/Sport.png"
         src={image}
         alt="movie"
         layout="fill"
@@ -29,4 +24,5 @@ export default function ActivityCard({
       </div>
     </div>
   );
-}
+};
+export default ActivityCard;

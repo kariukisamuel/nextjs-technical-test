@@ -1,17 +1,16 @@
+import SectionTitle from "../../Common/SectionTitle";
 import ProfileCard from "./ProfileCard";
 
 type title = {
   title: string;
 };
 
-export default function PartnerSection({ title }: title) {
+const Partners = ({ title }: title) => {
   return (
     <section id="meet-a-partner" className="w-full pt-20">
       <div className="w-5/6 lg:w-[70%] mx-auto">
         <div>
-          <h2 className="text-center  text-gray-700 text-2xl font-montserrat font-bold">
-            {title}
-          </h2>
+          <SectionTitle title={title} />
         </div>
         <div className="flex justify-between mt-10 flex-wrap">
           <ProfileCard />
@@ -30,4 +29,6 @@ export default function PartnerSection({ title }: title) {
       </div>
     </section>
   );
-}
+};
+
+export default Partners;
