@@ -1,5 +1,5 @@
 import Header from "./components/Layout/Header";
-import HeroSection from "./components/Home/Hero";
+import Hero from "./components/Home/Hero";
 import HowItWorks from "./components/Home/HowItWorks";
 import Partners from "./components/Home/Partners";
 import HolidayActivity from "./components/Home/HolidayActivity";
@@ -12,7 +12,7 @@ export default function Home() {
     <div className="max-w-{1440}">
       <Header />
       <main>
-        <HeroSection />
+        <Hero />
         <HowItWorks title="How Dreamshare works?" />
         <Partners title="Meet a partner for your best holiday" />
         <HolidayActivity title="Discover holiday activity ideas" />

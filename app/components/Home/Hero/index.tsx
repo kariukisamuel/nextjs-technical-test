@@ -1,7 +1,7 @@
 import Image from "next/image";
 const Hero = () => {
   return (
-    <div className="relative bg-gradient-to-r from-blazingRed  to-blazingYellow h-screen overflow-hidden">
+    <div className="  bg-gradient-to-r from-blazingRed  to-blazingYellow h-screen ">
       <section id="hero" className="h-full">
         <div className="absolute inset-0">
           <div className="relative w-full h-full">
@@ -16,12 +16,12 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="relative z-10 flex flex-col h-full justify-center items-center text-center">
-          <h1 className="text-5xl  text-white  font-bold leading-normal mb-4 font-montserrat">
+        <div className="relative mx-auto w-5/6 lg:w-[70%] z-10 flex flex-col h-full justify-center items-center text-center">
+          <h1 className="text-3xl md:text-5xl text-white  font-bold leading-normal mb-4 font-montserrat">
             SHARE YOUR <br></br>
             HOLIDAY DREAM
           </h1>
-          <p className="text-2xl text-lightAlmond mb-8 font-roboto">
+          <p className="text-xl md:text-2xl text-lightAlmond mb-8 font-roboto">
             And find the perfect partner to fullfill it.
           </p>
           <a
