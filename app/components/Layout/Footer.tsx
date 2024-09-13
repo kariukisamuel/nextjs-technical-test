@@ -1,5 +1,6 @@
 import Image from "next/image";
-export default function Footer() {
+
+const Footer = () => {
   return (
     <footer className="border-t-4 py-5 mt-10 border-blazingRed">
       <div className="w-5/6 lg:w-[70%] mx-auto flex justify-between mt-10 flex-wrap">
@@ -52,4 +53,5 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+export default Footer;

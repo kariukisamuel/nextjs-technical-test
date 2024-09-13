@@ -1,9 +1,11 @@
-export default function Nav() {
+import React from "react";
+
+const Header = () => {
   return (
     <header className="z-10 absolute w-full">
       <div className="flex w-5/6 lg:w-[70%] justify-between items-center mx-auto mt-10">
         <div className="logo">
-          <h3 className="font-montserrat font-bold uppercase text-2xl">
+          <h3 className="font-montserrat font-bold text-white uppercase text-2xl">
             Dreamshare
           </h3>
         </div>
@@ -24,4 +26,6 @@ export default function Nav() {
       </div>
     </header>
   );
-}
+};
+
+export default Header;
