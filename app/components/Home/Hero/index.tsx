@@ -1,7 +1,7 @@
 import Image from "next/image";
 const Hero = () => {
   return (
-    <div className=" relative bg-gradient-to-r from-blazingRed  to-blazingYellow h-screen overflow-hidden">
+    <div className="  bg-gradient-to-r from-blazingRed  to-blazingYellow h-screen ">
       <section id="hero" className="h-full">
         <div className="absolute inset-0">
           <div className="relative w-full h-full">
@@ -21,7 +21,7 @@ const Hero = () => {
             SHARE YOUR <br></br>
             HOLIDAY DREAM
           </h1>
-          <p className="text-2xl text-lightAlmond mb-8 font-roboto">
+          <p className="text-xl md:text-2xl text-lightAlmond mb-8 font-roboto">
             And find the perfect partner to fullfill it.
           </p>
           <a

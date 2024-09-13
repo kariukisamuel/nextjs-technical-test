@@ -11,7 +11,7 @@ export default function Home() {
     // Set a maximum width for the parent container to prevent elements from expanding beyond 1440px
     <div className="max-w-{1440}">
       <Header />
-      <main className="relative">
+      <main>
         <Hero />
         <HowItWorks title="How Dreamshare works?" />
         <Partners title="Meet a partner for your best holiday" />
