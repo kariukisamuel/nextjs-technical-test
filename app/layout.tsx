@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`w-full h-screen bg-white overflow-hiddden ${montserrat} ${roboto}`}
+        className={`w-full bg-white overflow-hiddden ${montserrat} ${roboto}`}
       >
         {children}
       </body>
