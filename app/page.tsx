@@ -16,7 +16,7 @@ export default function Home() {
         <HowItWorks title="How Dreamshare works?" />
         <Partners title="Meet a partner for your best holiday" />
         <HolidayActivity title="Discover holiday activity ideas" />
-        <Form title="Crate your holiday activity" />
+        <Form title="Create your holiday activity" />
       </main>
       <Footer />
     </div>

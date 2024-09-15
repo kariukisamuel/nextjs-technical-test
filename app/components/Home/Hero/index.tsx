@@ -1,7 +1,7 @@
 import Image from "next/image";
 const Hero = () => {
   return (
-    <div className="  bg-gradient-to-r from-blazingRed  to-blazingYellow h-screen ">
+    <div className="bg-gradient-to-r from-blazingRed  to-blazingYellow h-screen">
       <section id="hero" className="h-full">
         <div className="absolute inset-0">
           <div className="relative w-full h-full">
