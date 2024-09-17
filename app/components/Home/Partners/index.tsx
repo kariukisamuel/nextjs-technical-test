@@ -41,11 +41,11 @@ const Partners = ({ title }: title) => {
       try {
         const response = await LoadMoviesAndActors('persons', 1);
         const allActors: any = response.slice(0, limit);
-        setTimeout(() => {
+        // setTimeout(() => {
           setActors(allActors);
           setVisibleActors(allActors.slice(0, count))
           setIsLoading(false);
-        }, 15000); // 15,000 milliseconds = 15 seconds
+        // }, 15000); // 15,000 milliseconds = 15 seconds
       } catch (error) {
         console.error('Error fetching actors:', error);
         setIsLoading(false);
