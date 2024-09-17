@@ -36,7 +36,7 @@ const popularMoviesUrl = buildUrl('movie/popular', {
 });
 
 
-const loadMovies = async (filter: 'movies' | 'persons', page:number): Promise<any> => {
+const LoadMoviesAndActors = async (filter: 'movies' | 'persons', page:number): Promise<any> => {
     try {
         const fetchUrl = filter === 'movies' ? popularMoviesUrl : popularPersonsUrl;
         const res = await fetch(`${fetchUrl}&page=${page}`, { method: 'GET' });
@@ -53,4 +53,4 @@ const loadMovies = async (filter: 'movies' | 'persons', page:number): Promise<an
     }
 };
 
-export default loadMovies;
+export default LoadMoviesAndActors;

@@ -3,7 +3,7 @@ import SectionTitle from "../../Common/SectionTitle";
 import SkeletonLoader from "../../Common/SkeletonLoader";
 import StepCard from "./StepCard";
 import { useState, useEffect } from "react";
-import LoadMovies from "@/app/api/LoadMovies";
+import LoadMoviesAndActors from "@/app/api/LoadMoviesAndActors";
 
 type title = {
   title: string;
@@ -29,13 +29,13 @@ const HowItWorks = ({ title }: title) => {
     const fetchMoviesWithLimit = async (limit: number) => {
       setIsLoading(true);
       try {
-        const response = await LoadMovies('movies', 1);
+        const response = await LoadMoviesAndActors('movies', 1);
         const allMovies: Movie[] = response.slice(0, limit);
         // Simulate a 15-second delay to test skeleton loaders
         // setTimeout(() => {
-          setMovies(allMovies);
-          setVisibleMovies(allMovies.slice(0, count));
-          setIsLoading(false);
+        setMovies(allMovies);
+        setVisibleMovies(allMovies.slice(0, count));
+        setIsLoading(false);
         // }, 15000); // 15,000 milliseconds = 15 seconds
 
 
@@ -86,17 +86,18 @@ const HowItWorks = ({ title }: title) => {
               </>
 
               :
-              visibleMovies.map((m) => (
+              visibleMovies.map((movie) => (
                 <StepCard
-                  imageUrl={m.poster_path}
-                  title={m.title}
-                  description={m.overview}
+                  key={movie.id}
+                  imageUrl={movie.poster_path}
+                  title={movie.title}
+                  description={movie.overview}
 
                 />
               ))}
 
         </div>
-        {visibleMovies.length>0 &&
+        {visibleMovies.length > 0 &&
           <div className="flex justify-center">
             {visibleMovies.length < movies.length ? <button
               onClick={handleLoadMore}
@@ -111,7 +112,7 @@ const HowItWorks = ({ title }: title) => {
             </button>}
 
           </div>
-          }
+        }
 
       </div>
     </section>

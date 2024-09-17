@@ -1,10 +1,15 @@
 import Image from "next/image"; // Ensure you're importing the Image component from Next.js
 
-const ProfileCard = () => (
+type ProfileCardProps = {
+  imageUrl: string;
+  name: string;
+  knownFor: string;
+};
+const ProfileCard = ({imageUrl,name,knownFor}:ProfileCardProps) => (
   <div className="w-full sm:w-[50%] md:w-[23.5%] lg:w-[23.5%] mb-10 relative">
     <div className="relative flex justify-center w-32 h-32 rounded-full overflow-hidden mx-auto">
       <Image
-        src="/images/partners/partner.png"
+        src={`https://image.tmdb.org/t/p/w200${imageUrl}`}
         alt="Profile Image"
         layout="fill"
         objectFit="cover"
@@ -24,13 +29,13 @@ const ProfileCard = () => (
     </div>
     <div className="card-body mt-4 text-center">
       <div>
-        <h3 className="font-montserrat font-bold mt-3 text-gray-700 text-center text-xl">
-          Bradley Hunter
+        <h3 className="font-montserrat font-bold mt-3 text-gray-700 text-center text-xl line-clamp-1">
+          {name}
         </h3>
       </div>
       <div>
-        <p className="font-roboto text-sm mt-3 text-center text-gray-700">
-          Based in Chicago. I love playing tennis and loud music.
+        <p className="font-roboto text-sm mt-3 text-center text-gray-700 line-clamp-2">
+          {knownFor}
         </p>
       </div>
     </div>
