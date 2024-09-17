@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/codemod": "^14.2.11",
     "next": "14.2.9",
     "react": "^18",
     "react-dom": "^18"
