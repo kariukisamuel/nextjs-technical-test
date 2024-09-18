@@ -12,9 +12,9 @@ export default [
       parser: tsParser, // Set TypeScript parser
       globals: globals.browser, // Include browser globals like window, document
     },
-    
+
     plugins: {
-      "react": pluginReact, // Ensure the React plugin is referenced
+      react: pluginReact, // Ensure the React plugin is referenced
       "@typescript-eslint": tseslint, // Ensure the TypeScript ESLint plugin is referenced
     },
 
