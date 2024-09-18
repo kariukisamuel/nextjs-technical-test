@@ -10,4 +10,3 @@ const nextConfig = {
 };
 
 export default nextConfig; // Export the configuration object to be used by Next.js
-onfig;
