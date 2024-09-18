@@ -27,7 +27,7 @@ const Partners = ({ title }: title) => {
   const [visibleActors, setVisibleActors] = useState<Actors[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
-  const count = 4;
+  const [count] = useState(4);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -41,7 +41,7 @@ const Partners = ({ title }: title) => {
     const fetchActors = async (limit: number) => {
       try {
         const response = await LoadMoviesAndActors('actors', 1);
-        const allActors: any = response.slice(0, limit);
+        const allActors: Actors[] = response.slice(0, limit);
         // setTimeout(() => {
           setActors(allActors);
           setVisibleActors(allActors.slice(0, count))
@@ -61,7 +61,7 @@ const Partners = ({ title }: title) => {
 
   if (error) {
     return (
-      <p>Error Loading Something Isn't Right</p>
+      <p>Error Loading Something Isn&apos Right</p>
     )
   }
 
