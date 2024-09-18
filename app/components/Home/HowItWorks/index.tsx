@@ -20,7 +20,7 @@ const HowItWorks = ({ title }: title) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
   const [visibleMovies, setVisibleMovies] = useState<Movie[]>([]);
-  const [count, setCount] = useState(3);
+  const [count,setCount] = useState(3);
  
 
   useEffect(() => {
@@ -61,7 +61,7 @@ const HowItWorks = ({ title }: title) => {
 
   if (error) {
     return (
-      <p>Error Loading Something Isn't Right</p>
+      <p>Error Loading Something Isn&apos Right</p>
     )
   }
 
