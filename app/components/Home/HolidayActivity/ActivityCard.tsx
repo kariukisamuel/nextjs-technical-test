@@ -16,7 +16,7 @@ const ActivityCard = ({ width = "sm", image, title }: ActivityCardProps) => {
   };
   return (
     <div
-      className={`w-full ${widthVariants[width]} relative bg-gradient-to-tr from-blazingRed to-blazingYellow h-[300px] rounded-lg overflow-hidden mb-5 group`}
+      className={`w-full ${widthVariants[width]} relative bg-gradient-to-tr from-blazingRed to-blazingYellow h-[300px] rounded-lg overflow-hidden mb-5 shadow-md transition-all duration-300 ease-in-out hover:border-4 hover:border-blazingRed hover:shadow-lg group`}
     >
       {/* Image */}
       <Image

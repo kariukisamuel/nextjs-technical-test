@@ -6,7 +6,6 @@ type StepCardProps = {
   description: string;
 };
 
-
 const StepCard = ({
   imageUrl,
   stepNumber,
@@ -14,7 +13,10 @@ const StepCard = ({
   description,
 }: StepCardProps) => {
   return (
-    <div className="w-full sm:w-[31.5%] relative bg-gradient-to-tr from-blazingRed to-blazingYellow h-[400px] rounded-lg overflow-hidden mb-10 shadow-md transition-all duration-300 ease-in-out hover:border-2 hover:border-blazingRed hover:shadow-lg group">
+    <div
+      className="w-full sm:w-[31.5%] relative bg-gradient-to-tr from-blazingRed
+     to-blazingYellow h-[400px] rounded-lg overflow-hidden mb-10 shadow-md transition-all duration-300 ease-in-out hover:border-4 hover:border-blazingRed hover:shadow-lg group"
+    >
       {/* Image */}
       <Image
         src={`https://image.tmdb.org/t/p/w500${imageUrl}`}
@@ -38,15 +40,18 @@ const StepCard = ({
         </div>
         <div className="card-body">
           <div className="h-20">
-            <h3 className="font-montserrat text-white text-2xl line-clamp-2">{title}</h3>
+            <h3 className="font-montserrat text-white text-2xl line-clamp-2">
+              {title}
+            </h3>
           </div>
           <div className="h-20">
-            <p className="font-roboto text-sm text-white line-clamp-3">{description}</p>
+            <p className="font-roboto text-sm text-white line-clamp-3">
+              {description}
+            </p>
           </div>
         </div>
       </div>
     </div>
-
   );
 };
 export default StepCard;
