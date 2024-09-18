@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 type SkeletonLoaderProps = {
   circular?: boolean;
@@ -6,8 +6,12 @@ type SkeletonLoaderProps = {
   height?: string;
 };
 
-const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({ circular = false, width = 'w-full', height = 'h-6' }) => {
-  const shapeClass = circular ? 'rounded-full' : 'rounded';
+const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
+  circular = false,
+  width = "w-full",
+  height = "h-6",
+}) => {
+  const shapeClass = circular ? "rounded-full" : "rounded";
 
   return (
     <div

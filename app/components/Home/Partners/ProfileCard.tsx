@@ -5,8 +5,8 @@ type ProfileCardProps = {
   name: string;
   knownFor: string;
 };
-const ProfileCard = ({imageUrl,name,knownFor}:ProfileCardProps) => (
-  <div className="w-full sm:w-[50%] md:w-[23.5%] lg:w-[23.5%] mb-10 relative">
+const ProfileCard = ({ imageUrl, name, knownFor }: ProfileCardProps) => (
+  <div className="w-full sm:w-[50%] md:w-[23.5%] lg:w-[23.5%] mb-10 relative transition-all duration-300 ease-in-out hover:rounded-md hover:border-2 hover:border-blazingRed hover:shadow-lg ">
     <div className="relative flex justify-center w-32 h-32 rounded-full overflow-hidden mx-auto">
       <Image
         src={`https://image.tmdb.org/t/p/w200${imageUrl}`}

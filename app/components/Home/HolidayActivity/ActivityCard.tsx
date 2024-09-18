@@ -9,11 +9,11 @@ type ActivityCardProps = {
   title: string;
 };
 
-const ActivityCard = ({ width = 'sm', image, title }: ActivityCardProps) => {
+const ActivityCard = ({ width = "sm", image, title }: ActivityCardProps) => {
   const widthVariants: WidthVariants = {
-    sm: 'md:w-[31.5%]',
-    lg: 'md:w-[66%]',
-  }
+    sm: "md:w-[31.5%]",
+    lg: "md:w-[66%]",
+  };
   return (
     <div
       className={`w-full ${widthVariants[width]} relative bg-gradient-to-tr from-blazingRed to-blazingYellow h-[300px] rounded-lg overflow-hidden mb-5 group`}
@@ -38,7 +38,6 @@ const ActivityCard = ({ width = 'sm', image, title }: ActivityCardProps) => {
         </h3>
       </div>
     </div>
-
   );
 };
 export default ActivityCard;
