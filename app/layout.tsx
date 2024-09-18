@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import { montserrat, roboto } from "./utils/fonts";
 // Import global CSS styles
 import "./globals.css";
+//import speed insights for vercel
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 // Create metadata tags for the application
@@ -25,6 +27,8 @@ export default function RootLayout({
         // Set the body element's width to 100%, background color to white, and overflow style to hidden
         className={`w-full bg-white overflow-hiddden ${montserrat} ${roboto}`}
       >
+        {/* SpeedInsights Injection */}
+        <SpeedInsights />
         {/* Render the children content within the body element */}
         {children}
       </body>
