@@ -9,7 +9,7 @@ const Hero = () => {
               src="/images/hero/hero-background.png"
               alt="Background Image"
               layout="fill"
-              objectFit="contain"
+              objectFit="cover"
               objectPosition="center"
               quality={100}
             />
