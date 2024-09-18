@@ -23,22 +23,39 @@ const buildUrl = (path: string, params: UrlParams): string => {
 };
 
 // URLs for popular persons and movies
-const popularPersonsUrl = buildUrl('person/popular', {
+const popularActorsUrl = buildUrl('person/popular', {
     api_key: config.apiKey,
     language: 'en-US'
-  
+
 });
 
 const popularMoviesUrl = buildUrl('movie/popular', {
     api_key: config.apiKey,
     language: 'en-US'
- 
+
 });
 
+interface Movie {
+    id: number;
+    title: string;
+    overview: string;
+    poster_path: string;
+}
+interface KnownForItem {
+    overview: string;
+}
+interface Actors {
+    id: number;
+    name: string;
+    profile_path: string;
+    known_for: KnownForItem[];
+}
 
-const LoadMoviesAndActors = async (filter: 'movies' | 'persons', page:number): Promise<any> => {
+
+//added generic to cover filters movies /actors
+const LoadMoviesAndActors = async <T extends 'movies' | 'actors'>(filter: T, page: number): Promise<T extends 'movies' ? Movie[] : Actors[]> => {
     try {
-        const fetchUrl = filter === 'movies' ? popularMoviesUrl : popularPersonsUrl;
+        const fetchUrl = filter === 'movies' ? popularMoviesUrl : popularActorsUrl;
         const res = await fetch(`${fetchUrl}&page=${page}`, { method: 'GET' });
 
         if (!res.ok) {

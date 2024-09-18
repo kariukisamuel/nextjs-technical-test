@@ -21,9 +21,7 @@ const HowItWorks = ({ title }: title) => {
   const [error, setError] = useState<Error | null>(null);
   const [visibleMovies, setVisibleMovies] = useState<Movie[]>([]);
   const [count, setCount] = useState(3);
-  const [showMore, setShowMore] = useState(true);
-
-
+ 
 
   useEffect(() => {
     const fetchMoviesWithLimit = async (limit: number) => {
@@ -59,12 +57,13 @@ const HowItWorks = ({ title }: title) => {
     const newCount = Math.max(3, count - movies.length); // Ensure at least 3 movies are displayed
     setCount(newCount);
     setVisibleMovies(movies.slice(0, newCount));
-    if (newCount <= 3) {
-      setShowMore(true); // Reset to show more if we go back to initial count
-    }
   };
 
-
+  if (error) {
+    return (
+      <p>Error Loading Something Isn't Right</p>
+    )
+  }
 
 
   return (

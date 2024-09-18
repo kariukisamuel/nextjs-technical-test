@@ -26,6 +26,7 @@ const Partners = ({ title }: title) => {
   const [actors, setActors] = useState<Actors[]>([]);
   const [visibleActors, setVisibleActors] = useState<Actors[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<Error | null>(null);
   const count = 4;
 
   const openModal = () => {
@@ -39,7 +40,7 @@ const Partners = ({ title }: title) => {
   useEffect(() => {
     const fetchActors = async (limit: number) => {
       try {
-        const response = await LoadMoviesAndActors('persons', 1);
+        const response = await LoadMoviesAndActors('actors', 1);
         const allActors: any = response.slice(0, limit);
         // setTimeout(() => {
           setActors(allActors);
@@ -47,13 +48,23 @@ const Partners = ({ title }: title) => {
           setIsLoading(false);
         // }, 15000); // 15,000 milliseconds = 15 seconds
       } catch (error) {
-        console.error('Error fetching actors:', error);
-        setIsLoading(false);
+        if (error instanceof Error) {
+          setError(error);
+        } else {
+          setError(new Error('An unknown error occurred'));
+        }
       }
     };
 
     fetchActors(16);
   }, []);
+
+  if (error) {
+    return (
+      <p>Error Loading Something Isn't Right</p>
+    )
+  }
+
 
   return (
     <section id="meet-a-partner" className="w-full pt-20">
