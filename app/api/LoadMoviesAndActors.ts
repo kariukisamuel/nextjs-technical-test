@@ -131,7 +131,4 @@ const LoadMoviesAndActors = async <T extends "movies" | "actors">(
 
 // Exports the LoadMoviesAndActors function as the default export.
 export default LoadMoviesAndActors;
-function apiKey(replace: any) {
-  throw new Error("Function not implemented.");
-}
 
