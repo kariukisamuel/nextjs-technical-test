@@ -1,16 +1,12 @@
 // This line indicates that the component uses the client-side rendering approach (React)
 "use client";
 // Import necessary components and functions
-import SectionTitle from "../../Common/SectionTitle";
 import SkeletonLoader from "../../Common/SkeletonLoader";
 import StepCard from "./StepCard";
 import { useState, useEffect, useRef } from "react";
 import LoadMoviesAndActors from "@/app/api/LoadMoviesAndActors";
+import AnchorSection from "../../Common/AnchorSection";
 
-// Define type for the `title` prop
-type title = {
-  title: string;
-};
 // Define an interface for the movie data structure
 interface Movie {
   id: number;
@@ -19,7 +15,7 @@ interface Movie {
   poster_path: string;
 }
 // Create the `HowItWorks` functional component
-const HowItWorks = ({ title }: title) => {
+const HowDreamshareWorks = () => {
   // Define state variables for managing data and UI state
   const [movies, setMovies] = useState<Movie[]>([]); // Array to store fetched movies
   const [isLoading, setIsLoading] = useState(true); // Flag to indicate loading state
@@ -84,12 +80,15 @@ const HowItWorks = ({ title }: title) => {
 
   // Return the JSX structure for rendering the section
   return (
-    <section id="howitworks" className="w-full pt-20" ref={sectionPopular}>
-      <div className="w-11/12 lg:w-[70%] mx-auto">
-        <div>
-          {/* Render the SectionTitle component with the provided title */}
-          <SectionTitle title={title} />
-        </div>
+
+    // <section id="howitworDreamshare" className="w-full pt-20" ref={sectionPopular}>
+
+    <AnchorSection
+      id="how-dreamshare-works"
+      title="How Dreamshare works?"
+    >
+
+
         <div className="flex justify-between mt-10 flex-wrap">
           {/* Conditionally render skeleton loaders while data is loading */}
           {isLoading ? (
@@ -127,16 +126,16 @@ const HowItWorks = ({ title }: title) => {
               //  If all movies are loaded 
               < button
                 onClick={handleLoadLess} // Call the `handleLoadLess` function when clicked
-            className=" bg-blazingRed text-white  py-2 px-6 rounded-full text-lg font-bold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+                className=" bg-blazingRed text-white  py-2 px-6 rounded-full text-lg font-bold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
               >
-            Load Less
-          </button>
+                Load Less
+              </button>
+            )}
+          </div>
         )}
-      </div>
-        )}
-    </div>
-    </section >
+      
+    </AnchorSection>
   );
 };
 
-export default HowItWorks;
+export default HowDreamshareWorks;

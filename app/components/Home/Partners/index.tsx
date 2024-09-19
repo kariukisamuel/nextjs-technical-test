@@ -7,11 +7,8 @@ import ProfileCard from "./ProfileCard";
 import Modal from "../../Common/Modal";
 import SkeletonLoader from "../../Common/SkeletonLoader";
 import LoadMoviesAndActors from "@/app/api/LoadMoviesAndActors";
+import AnchorSection from "../../Common/AnchorSection";
 
-// Define the type for the `title` prop
-type title = {
-  title: string;
-};
 // Define the interface for a known-for item
 interface KnownForItem {
   overview: string;
@@ -24,7 +21,7 @@ interface Actors {
   known_for: KnownForItem[];
 }
 // Create a functional component named `Partners
-const Partners = ({ title }: title) => {
+const Partners = () => {
   // State variables for managing UI and data
   const [isModalOpen, setIsModalOpen] = useState(false); // Modal open state
   const [actors, setActors] = useState<Actors[]>([]); // Array to store fetched actors
@@ -42,7 +39,7 @@ const Partners = ({ title }: title) => {
   };
   // Use effect hook to fetch actors on component mount
   useEffect(() => {
-    const fetchActorsWithLimit = async (limit: number) => {
+    const fetchActors = async (limit: number) => {
       // Try to fetch actors
       try {
         const response = await LoadMoviesAndActors("actors", 1); // Fetch actors
@@ -65,7 +62,7 @@ const Partners = ({ title }: title) => {
     };
 
     // Fetch actors with a limit of 16
-    fetchActorsWithLimit(16);
+    fetchActors(16);
   }, []); // Empty dependency array to run only once on mount
 
 
@@ -74,93 +71,95 @@ const Partners = ({ title }: title) => {
   }
 
   return (
-    <section id="meet-a-partner" className="w-full pt-20">
-      <div className="w-5/6 lg:w-[70%] mx-auto">
-        <div>
-          <SectionTitle title={title} />
-        </div>
-        <div className="flex justify-between mt-10 flex-wrap">
+    <AnchorSection
+      id="meet-a-partner"
+      title="Meet a partner for your best holiday"
+    >
+
+      <div className="flex justify-between mt-10 flex-wrap">
+        {isLoading ? (
+          <>
+            <div className="w-full flex flex-col md:flex-row justify-between">
+
+              <div className="w-full sm:w-[50%] md:w-[50%] lg:w-[23.5%]">
+                <div className="flex justify-center my-5">
+                  <SkeletonLoader width="w-[128px]" height="h-[128px]" circular />
+                </div>
+                <SkeletonLoader width="w-full" height="h-[128px]" />
+              </div>
+              <div className="w-full sm:w-[50%] md:w-[23.5%] lg:w-[23.5%]">
+                <div className="flex justify-center my-5">
+                  <SkeletonLoader width="w-[128px]" height="h-[128px]" circular />
+                </div>
+                <SkeletonLoader width="w-full" height="h-[128px]" />
+              </div>
+              <div className="w-full sm:w-[50%] md:w-[23.5%] lg:w-[23.5%]">
+                <div className="flex justify-center my-5">
+                  <SkeletonLoader width="w-[128px]" height="h-[128px]" circular />
+                </div>
+                <SkeletonLoader width="w-full" height="h-[128px]" />
+              </div>
+              <div className="w-full sm:w-[50%] md:w-[23.5%] lg:w-[23.5%]">
+                <div className="flex justify-center my-5">
+                  <SkeletonLoader width="w-[128px]" height="h-[128px]" circular />
+                </div>
+                <SkeletonLoader width="w-full" height="h-[128px]" />
+              </div>
+            </div>
+
+
+          </>
+        ) : (
+          visibleActors.map((actor) => (
+            <ProfileCard
+              key={actor.id}
+              imageUrl={actor.profile_path}
+              name={actor.name}
+              knownFor={actor.known_for[0].overview}
+             
+            />
+          ))
+        )}
+      </div>
+      <div className="flex justify-center">
+        {visibleActors.length > 0 && (
+          <button
+            onClick={openModal}
+            className=" bg-white text-blazingRed border-2 border-blazingRed py-2 px-6   hover:bg-blazingRed hover:text-white hover hover:border-2 hover:border-white rounded-full text-lg font-bold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+          >
+            See other partners
+          </button>
+        )}
+
+        <Modal isOpen={isModalOpen} onClose={closeModal}>
           {isLoading ? (
             <>
-              <div className="w-full flex flex-col md:flex-row justify-between">
-
-                <div className="w-full sm:w-[50%] md:w-[23.5%] lg:w-[23.5%]">
-                  <div className="flex justify-center my-5">
-                    <SkeletonLoader width="w-[128px]" height="h-[128px]" circular />
-                  </div>
-                  <SkeletonLoader width="w-full" height="h-[128px]" />
-                </div>
-                <div className="w-full sm:w-[50%] md:w-[23.5%] lg:w-[23.5%]">
-                  <div className="flex justify-center my-5">
-                    <SkeletonLoader width="w-[128px]" height="h-[128px]" circular />
-                  </div>
-                  <SkeletonLoader width="w-full" height="h-[128px]" />
-                </div>
-                <div className="w-full sm:w-[50%] md:w-[23.5%] lg:w-[23.5%]">
-                  <div className="flex justify-center my-5">
-                    <SkeletonLoader width="w-[128px]" height="h-[128px]" circular />
-                  </div>
-                  <SkeletonLoader width="w-full" height="h-[128px]" />
-                </div>
-                <div className="w-full sm:w-[50%] md:w-[23.5%] lg:w-[23.5%]">
-                  <div className="flex justify-center my-5">
-                    <SkeletonLoader width="w-[128px]" height="h-[128px]" circular />
-                  </div>
-                  <SkeletonLoader width="w-full" height="h-[128px]" />
-                </div>
-              </div>
-
-
+              <SkeletonLoader
+                width="w-full sm:w-[50%] md:w-[23.5%] lg:w-[23.5%]"
+                height="h-[200px]"
+                circular
+              />
             </>
           ) : (
-            visibleActors.map((actor) => (
-              <ProfileCard
-                key={actor.id}
-                imageUrl={actor.profile_path}
-                name={actor.name}
-                knownFor={actor.known_for[0].overview}
-              />
-            ))
+            <>
+              <SectionTitle title="All Partners" />
+              <div className="flex flex-wrap my-5">
+                {actors.map((actor) => (
+                  <ProfileCard
+                    key={actor.id}
+                    imageUrl={actor.profile_path}
+                    name={actor.name}
+                    knownFor={actor.known_for[0].overview}
+                 
+                  />
+                ))}
+              </div>
+            </>
           )}
-        </div>
-        <div className="flex justify-center">
-          {visibleActors.length > 0 && (
-            <button
-              onClick={openModal}
-              className=" bg-white text-blazingRed border-2 border-blazingRed py-2 px-6   hover:bg-blazingRed hover:text-white hover hover:border-2 hover:border-white rounded-full text-lg font-bold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
-            >
-              See other partners
-            </button>
-          )}
-
-          <Modal isOpen={isModalOpen} onClose={closeModal}>
-            {isLoading ? (
-              <>
-                <SkeletonLoader
-                  width="w-full sm:w-[50%] md:w-[23.5%] lg:w-[23.5%]"
-                  height="h-[200px]"
-                  circular
-                />
-              </>
-            ) : (
-              <>
-                <SectionTitle title="All Partners" />
-                <div className="flex flex-wrap my-5">
-                  {actors.map((actor) => (
-                    <ProfileCard
-                      key={actor.id}
-                      imageUrl={actor.profile_path}
-                      name={actor.name}
-                      knownFor={actor.known_for[0].overview}
-                    />
-                  ))}
-                </div>
-              </>
-            )}
-          </Modal>
-        </div>
+        </Modal>
       </div>
-    </section>
+    </AnchorSection>
+
   );
 };
 

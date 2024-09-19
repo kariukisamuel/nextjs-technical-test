@@ -1,5 +1,6 @@
 // Import the `Image` component from `next/image` for optimized image handling
 import Image from "next/image";
+
 // Create a functional component named `Hero`
 const Hero = () => {
   // Return the JSX structure for rendering the hero section
@@ -21,7 +22,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative mx-auto w-5/6 lg:w-[70%] z-10 flex flex-col h-full justify-center items-center text-center">
+          <div className="relative mx-auto w-[96%] lg:w-[70%] z-10 flex flex-col h-full justify-center items-center text-center">
             {/* Render the hero section title with appropriate styling */}
             <h1 data-aos="fade-up" className="text-3xl md:text-5xl text-white  font-bold leading-normal mb-4 font-montserrat">
               SHARE YOUR <br></br>
