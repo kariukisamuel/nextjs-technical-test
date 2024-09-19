@@ -38,4 +38,9 @@
     animation: fadeUp 1.5s ease-out forwards;
     animation-delay: 1.5s; /* Slight delay after sub-header */
   }
+
+  .fade-up{
+    opacity: 0;
+    animation: fadeUp 2s ease-out forwards;
+  }
   

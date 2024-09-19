@@ -19,7 +19,7 @@ const StepCard = ({
   return (
     <div
       className="w-full sm-md:w-[31.5%] md:w-[31.5%] relative bg-gradient-to-tr from-blazingRed
-     to-blazingYellow h-[400px] rounded-lg overflow-hidden mb-10 shadow-md transition-all duration-300 ease-in-out hover:border-4 hover:border-blazingRed hover:shadow-lg group"
+     to-blazingYellow h-[400px] rounded-lg overflow-hidden mb-10 shadow-md transition-all duration-300 ease-in-out hover:border-4 hover:border-blazingRed hover:shadow-lg fade-up group"
     >
       {/* Image */}
       <Image
@@ -34,7 +34,7 @@ const StepCard = ({
 
       {/* Dark overlay on hover or focus */}
       <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 group-focus:bg-opacity-50 transition duration-300 ease-in-out"></div>
-      <div className="absolute inset-0 bg-black bg-opacity-35"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-15"></div>
 
       {/* Content (Text, Button, etc.) positioned at the bottom */}
       <div className="absolute bottom-0 p-5 z-10">
