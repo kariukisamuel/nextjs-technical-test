@@ -1,7 +1,6 @@
 // This line indicates that the component uses the client-side rendering approach (React)
 "use client";
 // Import necessary components and functions
-import SectionTitle from "../../Common/SectionTitle";
 import SkeletonLoader from "../../Common/SkeletonLoader";
 import StepCard from "./StepCard";
 import { useState, useEffect, useRef } from "react";
