@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import { montserrat, roboto } from "./utils/fonts";
 // Import global CSS styles
 import "./globals.css";
+//import speed insights for vercel
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 // Create metadata tags for the application
