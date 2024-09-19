@@ -22,14 +22,14 @@ type ActivityCardProps = {
 const ActivityCard = ({ width = "sm", image, title,backgroundPosition }: ActivityCardProps) => {
   // Define the mapping of width variants to their CSS classes
   const widthVariants: WidthVariants = {
-    sm: "md:w-[31.5%]",
-    lg: "md:w-[66%]",
+    sm: "sm-md:w-[31.5%] md:w-[31.5%]",
+    lg: "sm-md:w-[66%] md:w-[66%]",
   };
   // Return the JSX structure for rendering the activity card
   return (
     <div
       // Combine the base class with the width variant class
-      className={`w-full ${widthVariants[width]} relative bg-gradient-to-tr from-blazingRed to-blazingYellow h-[120px] md:h-[300px] rounded-lg overflow-hidden mb-5 shadow-md transition-all duration-300 ease-in-out hover:border-4 hover:border-blazingRed hover:shadow-lg group`}
+      className={`w-full ${widthVariants[width]} relative bg-gradient-to-tr from-blazingRed to-blazingYellow h-[120px] md:h-[310px] rounded-lg overflow-hidden mb-5 shadow-md transition-all duration-300 ease-in-out hover:border-4 hover:border-blazingRed hover:shadow-lg group`}
     >
       {/* Render the image using the `Image` component */}
       <Image
@@ -47,7 +47,7 @@ const ActivityCard = ({ width = "sm", image, title,backgroundPosition }: Activit
 
       {/* Render the card title on top of the image */}
       <div className="absolute p-5 h-full w-full flex justify-center items-center z-10">
-        <h3 className="font-montserrat font-bold text-white text-center text-2xl">
+        <h3 className="font-montserrat font-bold text-white text-center text-2xl sm-md:text-xl">
           {title}
         </h3>
       </div>
