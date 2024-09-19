@@ -31,7 +31,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="relative w-full h-screen md:h-auto max-w-3xl bg-white rounded-lg shadow-lg p-6">
+      <div className="relative w-full h-screen md:h-auto max-w-5xl bg-white p-6">
         {/* Close button */}
         <button
           className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 focus:outline-none"
