@@ -27,6 +27,8 @@ export default function RootLayout({
         // Set the body element's width to 100%, background color to white, and overflow style to hidden
         className={`w-full bg-white overflow-hiddden ${montserrat} ${roboto}`}
       >
+        {/* SpeedInsights Injection */}
+        <SpeedInsights />
         {/* Render the children content within the body element */}
         {children}
       </body>
