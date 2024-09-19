@@ -33,7 +33,7 @@ const config: Config = {
       
       // Add custom colors to the theme
       colors: {
-        blazingRed: "#FF4E50",  // A custom red color
+        blazingRed: "#E4004A",  // A custom red color
         lightAlmond: "#F7F3F2",  // A light almond color
         blazingYellow: "#F9D423", // A bright yellow color
       },
