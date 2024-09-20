@@ -6,15 +6,22 @@ type ProfileCardProps = {
   imageUrl: string; // URL of the profile image
   name: string; // Name of the person
   knownFor: string; // Brief description of what the person is known for
-
 };
 
 // Create the functional component named `ProfileCard`
 const ProfileCard = ({ imageUrl, name, knownFor }: ProfileCardProps) => (
-  <div className="w-full sm:w-[50%] lg:w-[23.5%] mb-10 relative py-2 transition-all duration-300 ease-in-out hover:rounded-md hover:border-1 hover:border-gray-300 hover:shadow-lg ">
+  <div
+    className="w-full sm:w-[50%] lg:w-[23.5%] 
+    mb-10 relative py-2 transition-all duration-300 
+    ease-in-out hover:rounded-md hover:border-1
+  hover:border-gray-300 hover:shadow-lg 
+    focus:outline-none focus:ring-2 focus:ring-blazingRed focus:rounded-md "
+    tabIndex={0}
+    role="button"
+    aria-label={`View Profile details: ${name}`}
+  >
     {/* Profile image container */}
     <div className="relative flex justify-center w-32 h-32 mx-auto ">
-
       <Image
         src={`https://image.tmdb.org/t/p/w200${imageUrl}`}
         alt={name}

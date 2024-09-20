@@ -17,20 +17,20 @@ export default function Home() {
         
         - <main>: The main content section of the page.
           - <Hero />: Displays the hero section, likely containing a prominent image or message.
-          - <HowItWorks title="How Dreamshare works?"/>: Component that explains how the Dreamshare service works. The title is passed as a prop.
-          - <Partners title="Meet a partner for your best holiday"/>: Displays information about partners related to the holiday experience. The title is passed as a prop.
-          - <HolidayActivity title="Discover holiday activity ideas"/>: Shows different ideas for holiday activities. The title is passed as a prop.
-          - <Form title="Create your holiday activity"/>: A form component allowing users to create or submit their holiday activities. The title is passed as a prop.
+          - <HowDreamshareWorks/>: Component that explains how the Dreamshare service works.
+          - <Partners/>: Displays information about partners related to the holiday experience. 
+          - <HolidayActivity/>: Shows different ideas for holiday activities. 
+          - <MeetAPartnerForm/>: A form component allowing users to create or submit their holiday activities. 
 
         - <Footer />: Renders the footer of the page, typically containing contact information, links, and other site-wide details.
       */}
       <Header />
       <main>
         <Hero />
-        <HowDreamshareWorks/>
+        <HowDreamshareWorks />
         <Partners />
-        <HolidayActivity/>
-        <MeetAPartnerForm/>
+        <HolidayActivity />
+        <MeetAPartnerForm />
       </main>
       <Footer />
     </div>

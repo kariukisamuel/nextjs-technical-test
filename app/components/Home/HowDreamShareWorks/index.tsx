@@ -27,7 +27,6 @@ const HowDreamshareWorks = () => {
   // Use effect hook to fetch data on component mount
   useEffect(() => {
     const fetchMoviesWithLimit = async (limit: number) => {
-
       try {
         // Fetch movies using the provided LoadMoviesAndActors function
         const response = await LoadMoviesAndActors("movies", 1);
@@ -39,7 +38,6 @@ const HowDreamshareWorks = () => {
         setVisibleMovies(allMovies.slice(0, count)); // Set initial visible movies
         setIsLoading(false); // Set loading state to false after successful fetch
         // }, 15000); // 15,000 milliseconds = 15 seconds
-
       } catch (error) {
         // Handle potential errors during data fetching
         if (error instanceof Error) {
@@ -80,60 +78,55 @@ const HowDreamshareWorks = () => {
 
   // Return the JSX structure for rendering the section
   return (
-
-    // <section id="howitworDreamshare" className="w-full pt-20" ref={sectionPopular}>
-
     <AnchorSection
       id="how-dreamshare-works"
       title="How Dreamshare works?"
+      ref={sectionPopular}
     >
+      <div className="flex justify-between mt-10 flex-wrap">
+        {/* Conditionally render skeleton loaders while data is loading */}
+        {isLoading ? (
+          <>
+            <SkeletonLoader width="sm:w-[31.5%]" height="h-[400px]" />
+            <SkeletonLoader width="sm:w-[31.5%]" height="h-[400px]" />
+            <SkeletonLoader width="sm:w-[31.5%]" height="h-[400px]" />
+          </>
+        ) : (
+          //Iterate over the `visibleMovies` array and render `StepCard` components for each movie
 
-
-        <div className="flex justify-between mt-10 flex-wrap">
-          {/* Conditionally render skeleton loaders while data is loading */}
-          {isLoading ? (
-            <>
-              <SkeletonLoader width="sm:w-[31.5%]" height="h-[400px]" />
-              <SkeletonLoader width="sm:w-[31.5%]" height="h-[400px]" />
-              <SkeletonLoader width="sm:w-[31.5%]" height="h-[400px]" />
-            </>
+          visibleMovies.map((movie, index) => (
+            <StepCard
+              key={movie.id}
+              stepNumber={index + 1}
+              imageUrl={movie.poster_path}
+              title={movie.title}
+              description={movie.overview}
+            />
+          ))
+        )}
+      </div>
+      {/* Conditionally render load more/load less buttons based on the number of visible movies */}
+      {visibleMovies.length > 0 && (
+        <div className="flex justify-center">
+          {/* If there are more movies to load */}
+          {visibleMovies.length < movies.length ? (
+            <button
+              onClick={handleLoadMore} // Call the `handleLoadMore` function when clicked
+              className=" bg-blazingRed text-white  py-2 px-6 rounded-full text-lg font-bold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+            >
+              Load More
+            </button>
           ) : (
-            //Iterate over the `visibleMovies` array and render `StepCard` components for each movie 
-
-            visibleMovies.map((movie, index) => (
-              <StepCard
-                key={movie.id}
-                stepNumber={index + 1}
-                imageUrl={movie.poster_path}
-                title={movie.title}
-                description={movie.overview}
-              />
-            ))
+            //  If all movies are loaded
+            <button
+              onClick={handleLoadLess} // Call the `handleLoadLess` function when clicked
+              className=" bg-blazingRed text-white  py-2 px-6 rounded-full text-lg font-bold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+            >
+              Load Less
+            </button>
           )}
         </div>
-        {/* Conditionally render load more/load less buttons based on the number of visible movies */}
-        {visibleMovies.length > 0 && (
-          <div className="flex justify-center">
-            {/* If there are more movies to load */}
-            {visibleMovies.length < movies.length ? (
-              <button
-                onClick={handleLoadMore}  // Call the `handleLoadMore` function when clicked
-                className=" bg-blazingRed text-white  py-2 px-6 rounded-full text-lg font-bold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
-              >
-                Load More
-              </button>
-            ) : (
-              //  If all movies are loaded 
-              < button
-                onClick={handleLoadLess} // Call the `handleLoadLess` function when clicked
-                className=" bg-blazingRed text-white  py-2 px-6 rounded-full text-lg font-bold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
-              >
-                Load Less
-              </button>
-            )}
-          </div>
-        )}
-      
+      )}
     </AnchorSection>
   );
 };

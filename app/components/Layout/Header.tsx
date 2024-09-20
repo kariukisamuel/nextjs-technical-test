@@ -14,7 +14,7 @@ const Header = () => {
           </h3>
         </div>
         {/* Navigation section */}
-        <nav className="flex justify-center sm:justify-end w-full">
+        <nav className="flex justify-center sm:justify-end w-full" aria-label="Main Navigation">
           <button className="text-white text-base md:text-xl hover:bg-blazingRed hover:text-white hover:rounded-full hover:border-2 hover:border-white px-4 py-2 mr-5 rounded-md transition-colors duration-300">
             Login
           </button>

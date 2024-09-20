@@ -27,7 +27,7 @@ jobs:
       - name: Install npm
         uses: actions/setup-node@v3
         with:
-          node-version: "20"          # Specify Node.js version 20
+          node-version: "20" # Specify Node.js version 20
           registry-url: "https://registry.npmjs.org/" # Use npm registry
 
       # Step 4: Install project dependencies (packages specified in package.json)

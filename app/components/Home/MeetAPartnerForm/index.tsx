@@ -4,10 +4,10 @@ import AnchorSection from "../../Common/AnchorSection";
 const MeetAPartnerForm = () => {
   // Return the JSX structure for rendering the form
   return (
-
     <AnchorSection
       id="create-your-holiday-form"
-      title="Create your holiday activity">
+      title="Create your holiday activity"
+    >
       <div>
         <p className="font-roboto text-center text-base sm:text-xl mt-10">
           Hi! What are your holiday interests?

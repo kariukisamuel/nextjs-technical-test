@@ -22,7 +22,6 @@ const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
   // Determine the shape class based on the `circular` property
   const shapeClass = circular ? "rounded-full" : "rounded";
 
-
   // Return the JSX structure for rendering the skeleton loader
   return (
     <div

@@ -19,17 +19,23 @@ const StepCard = ({
   return (
     <div
       className="w-full sm-md:w-[31.5%] md:w-[31.5%] relative bg-gradient-to-tr from-blazingRed
-     to-blazingYellow h-[400px] rounded-lg overflow-hidden mb-10 shadow-md transition-all duration-300 ease-in-out hover:border-4 hover:border-blazingRed hover:shadow-lg fade-up group"
+     to-blazingYellow h-[400px] rounded-lg overflow-hidden mb-10 shadow-md transition-all duration-300
+      ease-in-out focus:outline-none focus:ring-2 focus:ring-blazingRed focus:rounded-md group"
+      tabIndex={0}
+      role="button"
+      aria-label={`View Movies details: ${title}`}
     >
       {/* Image */}
       <Image
         // Construct the image URL using TMDB image path prefix
         src={`https://image.tmdb.org/t/p/w500${imageUrl}`}
-        alt="movie"
+        role="img"
+        alt={title}
         layout="fill"
         objectFit="cover"
         objectPosition="center"
         quality={100}
+        aria-label={`Movie: ${title}`}
       />
 
       {/* Dark overlay on hover or focus */}
@@ -39,9 +45,9 @@ const StepCard = ({
       {/* Content (Text, Button, etc.) positioned at the bottom */}
       <div className="absolute bottom-0 p-5 z-10">
         <div className="h-20 pb-5 flex items-start">
-          <button className="text-white uppercase text-xs font-montserrat font-light bg-blazingRed px-4 py-1 rounded-3xl">
+          <p className="text-white uppercase text-xs font-montserrat font-light bg-blazingRed px-4 py-1 rounded-3xl">
             Trending {`#${stepNumber}`}
-          </button>
+          </p>
         </div>
         <div className="card-body">
           {/* Title displayed with line clamping to limit the number of lines */}
