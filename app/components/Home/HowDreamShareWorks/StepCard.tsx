@@ -18,7 +18,7 @@ const StepCard = ({
   // Return the JSX structure for rendering the step card
   return (
     <div
-      className="w-full sm:w-[31.5%] relative bg-gradient-to-tr from-blazingRed
+      className="w-full sm-md:w-[31.5%] md:w-[31.5%] relative bg-gradient-to-tr from-blazingRed
      to-blazingYellow h-[400px] rounded-lg overflow-hidden mb-10 shadow-md transition-all duration-300 ease-in-out hover:border-4 hover:border-blazingRed hover:shadow-lg group"
     >
       {/* Image */}

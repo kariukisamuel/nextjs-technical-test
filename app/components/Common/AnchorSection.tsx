@@ -10,7 +10,7 @@ type AnchorSection = {
 
 const AnchorSection = ({ id, title, children }: AnchorSection) => {
     return (
-        <section id={id} className="w-full pt-20">
+        <section id={id} className="w-full pt-10">
             <div className="xs:w-[94%] lg:w-[70%] mx-auto">
                 <div>
                     <h2 className="text-center text-gray-700 text-2xl font-montserrat font-bold">

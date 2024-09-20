@@ -19,6 +19,8 @@ const config: Config = {
       md: "768px",  // Medium screens like tablets
       lg: "976px",  // Large screens like small laptops
       xl: "1440px", // Extra large screens like desktops
+      'sm-md': {'min': '620px', 'max': '768px'}, // Custom range for 600px to 768px
+
     },
     
     // Extend the default theme with custom settings
