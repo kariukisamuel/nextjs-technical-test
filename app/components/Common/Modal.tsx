@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 /**
  * ModalProps: Interface for the props passed to the Modal component.
  * - isOpen: boolean (Determines whether the modal is visible or not).
