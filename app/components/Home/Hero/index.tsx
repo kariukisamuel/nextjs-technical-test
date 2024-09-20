@@ -11,7 +11,7 @@ const Hero = () => {
             <div className="relative w-full h-full">
               {/* Render the background image using the `Image` component with appropriate props */}
               <Image
-                src="/images/hero/hero-background.png"
+                src="/images/hero/hero.webp"
                 alt="Background Image"
                 layout="fill"
                 objectFit="cover"
@@ -23,9 +23,9 @@ const Hero = () => {
 
           <div className="relative mx-auto w-[96%] lg:w-[70%] z-10 flex flex-col h-full justify-center items-center text-center">
             {/* Render the hero section title with appropriate styling */}
-            <h1 className=" header text-3xl md:text-5xl text-white  font-bold leading-normal mb-4 font-montserrat opacity-0">
-              SHARE YOUR <br></br>
-              HOLIDAY DREAM
+            <h1 className=" header text-3xl md:text-5xl text-white uppercase  font-bold leading-normal mb-4 font-montserrat opacity-0">
+              Share Your <br></br>
+              Holiday Dream
             </h1>
             {/* Render the hero section description with appropriate styling */}
             <p className="sub-header text-xl md:text-2xl text-lightAlmond mb-8 font-roboto opacity-0 ">
