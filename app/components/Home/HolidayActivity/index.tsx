@@ -16,7 +16,7 @@ const HolidayActivity = () => {
         {/* Render multiple `ActivityCard` components with different images and titles */}
         <ActivityCard
           width="sm"
-          image="/images/activities/sports.jpg"
+          image="/images/activities/sports.webp"
           title="Sports and Activities"
           backgroundPosition="bottom"
         />
@@ -28,31 +28,31 @@ const HolidayActivity = () => {
         />
         <ActivityCard
           width="sm"
-          image="/images/activities/river-rafting.jpg"
+          image="/images/activities/river-rafting.webp"
           title="Extreme Sports and Expeditions"
           backgroundPosition="top left"
         />
         <ActivityCard
           width="sm"
-          image="/images/activities/safari.jpg"
+          image="/images/activities/safari.webp"
           title="Safari"
           backgroundPosition="center"
         />
         <ActivityCard
           width="lg"
-          image="/images/activities/culture.jpg"
+          image="/images/activities/culture.webp"
           title="Culture and Education"
           backgroundPosition="center"
         />
         <ActivityCard
           width="lg"
-          image="/images/activities/enjoy.jpg"
+          image="/images/activities/enjoy.webp"
           title="Enjoyment and Relaxation"
           backgroundPosition="center"
         />
         <ActivityCard
           width="sm"
-          image="/images/activities/travelling.jpg"
+          image="/images/activities/travelling.webp"
           title="Travelling"
           backgroundPosition="top"
         />
