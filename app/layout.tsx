@@ -7,6 +7,9 @@ import "./globals.css";
 //import speed insights for vercel
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+import { GoogleTagManager } from '@next/third-parties/google'
+
+
 // Create metadata tags for the application
 
 export const metadata: Metadata = {
@@ -50,6 +53,7 @@ export default function RootLayout({
         {children}
         {/* SpeedInsights Injection */}
         <SpeedInsights />
+        <GoogleTagManager gtmId="GTM-5ZCC7VGD" />
       </body>
     </html>
   );
