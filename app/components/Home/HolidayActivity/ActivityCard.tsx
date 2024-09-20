@@ -4,7 +4,6 @@ import Image from "next/image";
 type WidthVariants = {
   sm: string;
   lg: string;
-
 };
 // Define the type of props for the `ActivityCard` component
 type ActivityCardProps = {
@@ -14,12 +13,17 @@ type ActivityCardProps = {
   image: string;
   // Required property for the card title
   title: string;
-   // Required property for background positioning
-  backgroundPosition:string;
+  // Required property for background positioning
+  backgroundPosition: string;
 };
 
 // Create a functional component named `ActivityCard`
-const ActivityCard = ({ width = "sm", image, title,backgroundPosition }: ActivityCardProps) => {
+const ActivityCard = ({
+  width = "sm",
+  image,
+  title,
+  backgroundPosition,
+}: ActivityCardProps) => {
   // Define the mapping of width variants to their CSS classes
   const widthVariants: WidthVariants = {
     sm: "sm-md:w-[31.5%] md:w-[31.5%]",
@@ -29,12 +33,18 @@ const ActivityCard = ({ width = "sm", image, title,backgroundPosition }: Activit
   return (
     <div
       // Combine the base class with the width variant class
-      className={`w-full ${widthVariants[width]} relative bg-gradient-to-tr from-blazingRed to-blazingYellow h-[120px] md:h-[310px] rounded-lg overflow-hidden mb-5 shadow-md transition-all duration-300 ease-in-out hover:border-4 hover:border-blazingRed hover:shadow-lg group`}
+      className={`w-full ${widthVariants[width]} relative bg-gradient-to-tr from-blazingRed to-blazingYellow h-[200px] md:h-[310px] rounded-lg 
+      overflow-hidden mb-5 shadow-md transition-all duration-300 ease-in-out group
+      focus:outline-none focus:ring-2 focus:ring-blazingRed focus:rounded-md 
+      `}
+      tabIndex={0}
+      role="button"
+      aria-label={`View Activity details: ${title}`}
     >
       {/* Render the image using the `Image` component */}
       <Image
         src={image}
-        alt="movie"
+        alt={title}
         layout="fill"
         objectFit="cover"
         objectPosition={backgroundPosition}
