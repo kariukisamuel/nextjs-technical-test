@@ -1,5 +1,7 @@
 // Import the Image component from Next.js
 import Image from "next/image";
+// Import Link Next Js Component
+import Link from "next/link";
 
 // Create the Footer component
 const Footer = () => {
@@ -19,49 +21,49 @@ const Footer = () => {
             Company
           </p>
           <div className="flex flex-wrap gap-2 sm:gap-4 justify-center  md:gap-0 md:flex-col font-roboto font-light mt-2">
-            <a href="" className="py-1 px-3 text-gray-400  text-sm lg:text-base hover:text-white hover:bg-blazingRed">
+            <Link  href="#" className="py-1 px-3 text-gray-400  text-base hover:text-white hover:bg-blazingRed">
               About
-            </a>
-            <a href="" className="py-1 px-3 text-gray-400  text-sm lg:text-base hover:text-white hover:bg-blazingRed">
+            </Link>
+            <Link  href="#" className="py-1 px-3 text-gray-400  text-base hover:text-white hover:bg-blazingRed">
               Contact
-            </a>
-            <a href="" className="py-1 px-3 text-gray-400  text-sm lg:text-base hover:text-white hover:bg-blazingRed">
+            </Link>
+            <Link  href="#" className="py-1 px-3 text-gray-400  text-base hover:text-white hover:bg-blazingRed">
               Press
-            </a>
-            <a href="" className="py-1 px-3 text-gray-400  text-sm lg:text-base hover:text-white hover:bg-blazingRed">
+            </Link>
+            <Link  href="#" className="py-1 px-3 text-gray-400  text-base hover:text-white hover:bg-blazingRed">
               Blog
-            </a>
-            <a href="" className="py-1 px-3 text-gray-400  text-sm lg:text-base hover:text-white hover:bg-blazingRed">
+            </Link>
+            <Link  href="#" className="py-1 px-3 text-gray-400  text-base hover:text-white hover:bg-blazingRed">
               Terms and Privacy
-            </a>
-            <a href="" className="py-1 px-3 text-gray-400  text-sm lg:text-base hover:text-white hover:bg-blazingRed">
+            </Link>
+            <Link  href="#" className="py-1 px-3 text-gray-400  text-base hover:text-white hover:bg-blazingRed">
               Help
-            </a>
+            </Link>
           </div>
         </div>
         {/* Partners section (placeholder for now) */}
-        <div className="w-full md:w-[30%] lg:w-[30%] relative">
+        <div className="w-full md:w-[30%] lg:w-[30%] , relative">
           <p className="font-montserrat font-bold capitalize text-center md:text-left text-gray-700 text-xl">
             Partners
           </p>
           <div className="flex flex-wrap gap-2 sm:gap-4 justify-center  md:gap-0 md:flex-col font-roboto font-light mt-2">
-            <a href="" className="py-1 px-3 text-gray-400  text-sm lg:text-base hover:text-white hover:bg-blazingRed">
+            <Link  href="#" className="py-1 px-3 text-gray-400  text-base hover:text-white hover:bg-blazingRed">
               Gary Oldman
-            </a>
-            <a href="" className="py-1 px-3 text-gray-400  text-sm lg:text-base hover:text-white hover:bg-blazingRed">
+            </Link>
+            <Link  href="#" className="py-1 px-3 text-gray-400  text-base hover:text-white hover:bg-blazingRed">
               Joey King
-            </a>
-            <a href="" className="py-1 px-3 text-gray-400  text-sm lg:text-base hover:text-white hover:bg-blazingRed">
+            </Link>
+            <Link  href="#" className="py-1 px-3 text-gray-400  text-base hover:text-white hover:bg-blazingRed">
               Kinjal Nanda
-            </a>
-            <a href="" className="py-1 px-3 text-gray-400  text-sm lg:text-base hover:text-white hover:bg-blazingRed">
+            </Link>
+            <Link  href="#" className="py-1 px-3 text-gray-400  text-base hover:text-white hover:bg-blazingRed">
               C. Prem Kumar
-            </a>
+            </Link>
 
           </div>
         </div>
         {/* Logo section */}
-        <div className="w-full md:w-[10%] lg:w-[15%] mb-10  relative flex flex-col items-center">
+        <div className="w-full md:w-[10%] lg:w-[15%] mb-10 mt-5 relative flex flex-col items-center">
           <div className="">
             <p className="font-montserrat font-bold uppercase text-gray-300 text-xs">Designed By</p>
           </div>
