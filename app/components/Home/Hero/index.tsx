@@ -1,8 +1,5 @@
-"use client";
 // Import the `Image` component from `next/image` for optimized image handling
 import Image from "next/image";
-//Import useEffect, useRef
-import { useEffect, useRef } from 'react';
 
 const Hero = () => {
   // Return the JSX structure for rendering the hero section
