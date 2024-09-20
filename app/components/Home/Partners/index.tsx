@@ -2,7 +2,6 @@
 "use client";
 // Import necessary components and functions
 import React, { useState, useEffect } from "react";
-import SectionTitle from "../../Common/SectionTitle";
 import ProfileCard from "./ProfileCard";
 import Modal from "../../Common/Modal";
 import SkeletonLoader from "../../Common/SkeletonLoader";
@@ -65,7 +64,6 @@ const Partners = () => {
     fetchActors(16);
   }, []); // Empty dependency array to run only once on mount
 
-
   if (error) {
     return <p>Error Loading Something Isn&apos Right</p>;
   }
@@ -75,39 +73,51 @@ const Partners = () => {
       id="meet-a-partner"
       title="Meet a partner for your best holiday"
     >
-
       <div className="flex justify-between mt-10 flex-wrap">
         {isLoading ? (
           <>
             <div className="w-full flex flex-col md:flex-row justify-between">
-
               <div className="w-full sm:w-[50%] md:w-[50%] lg:w-[23.5%]">
                 <div className="flex justify-center my-5">
-                  <SkeletonLoader width="w-[128px]" height="h-[128px]" circular />
+                  <SkeletonLoader
+                    width="w-[128px]"
+                    height="h-[128px]"
+                    circular
+                  />
                 </div>
                 <SkeletonLoader width="w-full" height="h-[128px]" />
               </div>
               <div className="w-full sm:w-[50%] md:w-[23.5%] lg:w-[23.5%]">
                 <div className="flex justify-center my-5">
-                  <SkeletonLoader width="w-[128px]" height="h-[128px]" circular />
+                  <SkeletonLoader
+                    width="w-[128px]"
+                    height="h-[128px]"
+                    circular
+                  />
                 </div>
                 <SkeletonLoader width="w-full" height="h-[128px]" />
               </div>
               <div className="w-full sm:w-[50%] md:w-[23.5%] lg:w-[23.5%]">
                 <div className="flex justify-center my-5">
-                  <SkeletonLoader width="w-[128px]" height="h-[128px]" circular />
+                  <SkeletonLoader
+                    width="w-[128px]"
+                    height="h-[128px]"
+                    circular
+                  />
                 </div>
                 <SkeletonLoader width="w-full" height="h-[128px]" />
               </div>
               <div className="w-full sm:w-[50%] md:w-[23.5%] lg:w-[23.5%]">
                 <div className="flex justify-center my-5">
-                  <SkeletonLoader width="w-[128px]" height="h-[128px]" circular />
+                  <SkeletonLoader
+                    width="w-[128px]"
+                    height="h-[128px]"
+                    circular
+                  />
                 </div>
                 <SkeletonLoader width="w-full" height="h-[128px]" />
               </div>
             </div>
-
-
           </>
         ) : (
           visibleActors.map((actor) => (
@@ -116,7 +126,6 @@ const Partners = () => {
               imageUrl={actor.profile_path}
               name={actor.name}
               knownFor={actor.known_for[0].overview}
-             
             />
           ))
         )}
@@ -131,7 +140,7 @@ const Partners = () => {
           </button>
         )}
 
-        <Modal isOpen={isModalOpen} onClose={closeModal}>
+        <Modal title="All Partners" isOpen={isModalOpen} onClose={closeModal}>
           {isLoading ? (
             <>
               <SkeletonLoader
@@ -142,15 +151,13 @@ const Partners = () => {
             </>
           ) : (
             <>
-              <SectionTitle title="All Partners" />
-              <div className="flex flex-wrap my-5">
+              <div className="flex flex-wrap m-5">
                 {actors.map((actor) => (
                   <ProfileCard
                     key={actor.id}
                     imageUrl={actor.profile_path}
                     name={actor.name}
                     knownFor={actor.known_for[0].overview}
-                 
                   />
                 ))}
               </div>
@@ -159,7 +166,6 @@ const Partners = () => {
         </Modal>
       </div>
     </AnchorSection>
-
   );
 };
 

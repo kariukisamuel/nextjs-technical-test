@@ -1,10 +1,23 @@
 // Import the Image component from Next.js
 import Image from "next/image";
-// Import Link Next Js Component
-import Link from "next/link";
+// Import Footer Link Conponent
+import FooterLink from "../Common/FooterLink";
 
 // Create the Footer component
 const Footer = () => {
+  const links = [
+    { id: 1, href: "/about", ariaLabel: "About Us Page", name: "About" },
+    { id: 2, href: "/contact", ariaLabel: "Contact Us Page", name: "Contact" },
+    { id: 3, href: "/press", ariaLabel: "Press Page", name: "Press" },
+    { id: 4, href: "/blog", ariaLabel: "Blog Page", name: "Blog" },
+    {
+      id: 5,
+      href: "/terms-and-privacy",
+      ariaLabel: "Terms and Privacy Page",
+      name: "Terms and Privacy",
+    },
+    { id: 6, href: "/help", ariaLabel: "Help Page", name: "Help" },
+  ];
   return (
     // Footer container with a border
     <footer className="border-t-4 py-5 mt-10 border-blazingRed">
@@ -20,25 +33,15 @@ const Footer = () => {
           <p className="font-montserrat font-bold Capitalize text-center md:text-left text-gray-700 text-xl">
             Company
           </p>
-          <div className="flex flex-wrap gap-2 sm:gap-4 justify-center  md:gap-0 md:flex-col font-roboto font-light mt-2">
-            <Link  href="#" className="py-1 px-3 text-gray-400  text-base hover:text-white hover:bg-blazingRed">
-              About
-            </Link>
-            <Link  href="#" className="py-1 px-3 text-gray-400  text-base hover:text-white hover:bg-blazingRed">
-              Contact
-            </Link>
-            <Link  href="#" className="py-1 px-3 text-gray-400  text-base hover:text-white hover:bg-blazingRed">
-              Press
-            </Link>
-            <Link  href="#" className="py-1 px-3 text-gray-400  text-base hover:text-white hover:bg-blazingRed">
-              Blog
-            </Link>
-            <Link  href="#" className="py-1 px-3 text-gray-400  text-base hover:text-white hover:bg-blazingRed">
-              Terms and Privacy
-            </Link>
-            <Link  href="#" className="py-1 px-3 text-gray-400  text-base hover:text-white hover:bg-blazingRed">
-              Help
-            </Link>
+          <div className="flex flex-wrap gap-2 sm:gap-4 justify-center  md:gap-0 md:flex-col font-roboto font-light mt-5">
+            {links.map((link) => (
+              <FooterLink
+                key={link.id}
+                href={link.href}
+                ariaLabel={link.ariaLabel}
+                name={link.name}
+              />
+            ))}
           </div>
         </div>
         {/* Partners section (placeholder for now) */}
@@ -46,31 +49,19 @@ const Footer = () => {
           <p className="font-montserrat font-bold capitalize text-center md:text-left text-gray-700 text-xl">
             Partners
           </p>
-          <div className="flex flex-wrap gap-2 sm:gap-4 justify-center  md:gap-0 md:flex-col font-roboto font-light mt-2">
-            <Link  href="#" className="py-1 px-3 text-gray-400  text-base hover:text-white hover:bg-blazingRed">
-              Gary Oldman
-            </Link>
-            <Link  href="#" className="py-1 px-3 text-gray-400  text-base hover:text-white hover:bg-blazingRed">
-              Joey King
-            </Link>
-            <Link  href="#" className="py-1 px-3 text-gray-400  text-base hover:text-white hover:bg-blazingRed">
-              Kinjal Nanda
-            </Link>
-            <Link  href="#" className="py-1 px-3 text-gray-400  text-base hover:text-white hover:bg-blazingRed">
-              C. Prem Kumar
-            </Link>
-
-          </div>
         </div>
         {/* Logo section */}
         <div className="w-full md:w-[10%] lg:w-[15%] mb-10 mt-5 relative flex flex-col items-center">
           <div className="">
-            <p className="font-montserrat font-bold uppercase text-gray-300 text-xs">Designed By</p>
+            <p className="font-montserrat font-bold uppercase text-slate-500text-xs">
+              Designed By
+            </p>
           </div>
           <div className="py-2">
             <Image
               src="/images/footer/web-designer-logo.svg"
-              alt="Website Designer Logo"
+              alt=""
+              role="img"
               width="113"
               height="43"
               quality={100}

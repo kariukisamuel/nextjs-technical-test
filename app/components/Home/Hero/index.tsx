@@ -12,7 +12,9 @@ const Hero = () => {
               {/* Render the background image using the `Image` component with appropriate props */}
               <Image
                 src="/images/hero/hero.webp"
-                alt="Background Image"
+                alt="A scenic view of the beach"
+                role="img"
+                tabIndex={0}
                 layout="fill"
                 objectFit="cover"
                 objectPosition="center"
@@ -21,7 +23,9 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative mx-auto w-[96%] lg:w-[70%] z-10 flex flex-col h-full justify-center items-center text-center">
+          <div
+            className="relative mx-auto w-[96%] lg:w-[70%] z-10 flex flex-col h-full justify-center items-center text-center"
+          >
             {/* Render the hero section title with appropriate styling */}
             <h1 className=" header text-3xl md:text-5xl text-white uppercase  font-bold leading-normal mb-4 font-montserrat opacity-0">
               Share Your <br></br>
@@ -33,7 +37,9 @@ const Hero = () => {
             </p>
             {/* Render a button with a call to action */}
             <a
-              href="#"
+              href="#meet-a-partner"
+              aria-label="Meet a partner for your best holiday"
+              role="button"
               className="hero-button bg-blazingRed text-white  py-2 px-6 rounded-full text-lg font-bold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg opacity-0"
             >
               Find your holiday partner
