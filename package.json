@@ -12,7 +12,6 @@
     "@next/codemod": "^14.2.11",
     "@vercel/speed-insights": "^1.0.12",
     "aos": "^2.3.4",
-    "gsap": "^3.12.5",
     "next": "14.2.9",
     "next-pwa": "^5.6.0",
     "react": "^18",
