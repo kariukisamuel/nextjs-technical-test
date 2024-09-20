@@ -7,8 +7,7 @@ type AnchorSectionProps = {
   children: ReactNode;
 };
 
-const AnchorSection = forwardRef<HTMLDivElement, AnchorSectionProps>(
-  ({ id, title, children }, ref) => {
+const AnchorSection = forwardRef<HTMLDivElement, AnchorSectionProps>(({ id, title, children }, ref) => {
     return (
       <section id={id} className="w-full pt-10" ref={ref}>
         <div className="xs:w-[94%] lg:w-[70%] mx-auto">
@@ -24,4 +23,6 @@ const AnchorSection = forwardRef<HTMLDivElement, AnchorSectionProps>(
   },
 );
 
+// Add displayName for debugging purposes
+AnchorSection.displayName = "AnchorSection";
 export default AnchorSection;

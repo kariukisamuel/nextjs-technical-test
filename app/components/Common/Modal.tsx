@@ -28,8 +28,7 @@ interface ModalProps {
  */
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
-  const modalRef = useRef<HTMLDivElement>(null);
-  // Do not render the modal if it's not open.
+
 
   // Handle Escape key to close the modal
   useEffect(() => {
@@ -51,6 +50,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
     };
   }, [isOpen, onClose]);
 
+
+  // Do not render the modal if it's not open.
   if (!isOpen) return null;
 
   return (
