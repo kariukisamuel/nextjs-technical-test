@@ -4,7 +4,6 @@
 import SkeletonLoader from "../../Common/SkeletonLoader";
 import StepCard from "./StepCard";
 import { useState, useEffect, useRef } from "react";
-import LoadMoviesAndActors from "@/app/api/LoadMoviesAndActors";
 import AnchorSection from "../../Common/AnchorSection";
 
 // Define an interface for the movie data structure
@@ -28,9 +27,11 @@ const HowDreamshareWorks = () => {
   useEffect(() => {
     const fetchMoviesWithLimit = async (limit: number) => {
       try {
-        // Fetch movies using the provided LoadMoviesAndActors function
-        const response = await LoadMoviesAndActors("movies", 1);
-        const allMovies: Movie[] = response.slice(0, limit);
+        // Fetch movies using the provid function
+        const filter="movies";
+        const res = await fetch(`/api/fetch-movies-actors?filter=${filter}&page=1`);
+        const result = await res.json();
+        const allMovies: Movie[] = result.slice(0, limit);
 
         // Simulate a 15-second delay for testing skeleton loaders
         // setTimeout(() => {

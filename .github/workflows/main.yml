@@ -5,6 +5,10 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
+  # Custom API environment variables
+  API_BASE_URL: ${{ secrets.TMDB_API_URL }}
+  API_KEY: ${{ secrets.TMDB_API_SECRET_KEY }}
+
 on:
   # Trigger deployment on every push to the 'main' branch
   push:

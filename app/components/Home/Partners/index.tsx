@@ -5,7 +5,6 @@ import React, { useState, useEffect } from "react";
 import ProfileCard from "./ProfileCard";
 import Modal from "../../Common/Modal";
 import SkeletonLoader from "../../Common/SkeletonLoader";
-import LoadMoviesAndActors from "@/app/api/LoadMoviesAndActors";
 import AnchorSection from "../../Common/AnchorSection";
 
 // Define the interface for a known-for item
@@ -41,8 +40,11 @@ const Partners = () => {
     const fetchActors = async (limit: number) => {
       // Try to fetch actors
       try {
-        const response = await LoadMoviesAndActors("actors", 1); // Fetch actors
-        const allActors: Actors[] = response.slice(0, limit); // Get the first 'limit' actors
+        const filter="actors";
+        const res = await fetch(`/api/fetch-movies-actors?filter=${filter}&page=1`);
+        const result = await res.json();
+        const allActors: Actors[] = result.slice(0, limit);
+       
 
         // Simulate a 60-second delay for testing purposes (remove in production)
         // setTimeout(() => {
