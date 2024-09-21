@@ -2,51 +2,33 @@
 
 To get this project up and running on your local machine, follow these steps:
 
-### Ignored Files and Folders
 
-On commit to the GitHub repository, the following folders and files are omitted:
+1. ### Installation Instructions
 
-#### Dependencies
-- `/node_modules`
-- `/.pnp`
-- `.pnp.js`
-- `.yarn/install-state.gz`
+First, ensure you have Node.js installed. If it's not installed, you can install the latest version using the following command:
 
-#### Testing
-- `/coverage`
+```bash
+# For macOS and Linux (using Homebrew)
+brew install node
 
-#### Next.js
-- `/.next/`
-- `/out/`
+# For Windows (using Chocolatey)
+choco install nodejs
 
-#### Production
-- `/build`
+# Alternatively, download and install from the official Node.js website:
+https://nodejs.org/
 
-#### Miscellaneous
-- `.DS_Store`
-- `*.pem`
+```
+2. Clone the repository:
 
-#### Debugging
-- `npm-debug.log*`
-- `yarn-debug.log*`
-- `yarn-error.log*`
+```bash
+# Via Ssh
+git clone git@github.com:kariukisamuel/nextjs-technical-test.git
+# Via Git Cli
+gh repo clone kariukisamuel/nextjs-technical-test
+# Via Https
+https://github.com/kariukisamuel/nextjs-technical-test.git
 
-#### Local Environment Files
-- `.env*.local`
-
-#### Vercel
-- `.vercel`
-
-#### TypeScript
-- `*.tsbuildinfo`
-- `next-env.d.ts`
-
-#### VSCode
-- `.vscode`
-
-### Installation
-
-1. First, ensure you have Node.js installed.
+```
 2. Install the project dependencies by running one of the following commands:
 
 ```bash
@@ -58,7 +40,9 @@ pnpm install
 # or
 bun install
 ```
+
 3. Create an .env.local file to and create two variable namely(You may need to create a TMDB account if you dont have one already):
+
 ```
 TMDB_API_URL=https://api.themoviedb.org/3/
 TMDB_API_SECRET_KEY={your_key} 

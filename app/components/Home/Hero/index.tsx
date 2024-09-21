@@ -19,6 +19,8 @@ const Hero = () => {
                 objectFit="cover"
                 objectPosition="center"
                 quality={100}
+                priority // This tells Next.js to load the image eagerly
+
               />
             </div>
           </div>
