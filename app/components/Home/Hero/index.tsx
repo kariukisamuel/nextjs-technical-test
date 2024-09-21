@@ -10,18 +10,22 @@ const Hero = () => {
           <div className="absolute inset-0">
             <div className="relative w-full h-full">
               {/* Render the background image using the `Image` component with appropriate props */}
-              <Image
-                src="/images/home/hero/hero.webp"
-                alt="A scenic view of the beach"
-                role="img"
-                tabIndex={0}
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center"
-                quality={100}
-                priority // This tells Next.js to load the image eagerly
 
-              />
+              <picture>
+                <source srcSet="/images/home/hero/hero.jpg" type="image/jpeg" />
+                <Image
+                  src="/images/home/hero/hero.webp"
+                  alt="A scenic view of the beach"
+                  role="img"
+                  tabIndex={0}
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center"
+                  quality={100}
+                  priority // This tells Next.js to load the image eagerly
+
+                />
+              </picture>
             </div>
           </div>
 
