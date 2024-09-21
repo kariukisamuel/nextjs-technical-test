@@ -1,5 +1,5 @@
 ## Project Structure
-
+```
 .github (folder)
 ├── workflows
 │   ├── build.yml
@@ -66,3 +66,5 @@
 ├── prettierrc.json
 ├── tailwind.config.ts (or tailwind.config.js) (Optional)
 └── tsconfig.json
+
+```
