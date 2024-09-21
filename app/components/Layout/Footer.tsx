@@ -61,7 +61,6 @@ const Footer = () => {
             <Image
               src="/images/footer/web-designer-logo.svg"
               alt=""
-              role="img"
               width="113"
               height="43"
               quality={100}
