@@ -33,7 +33,7 @@ const Footer = () => {
           <p className="font-montserrat font-bold Capitalize text-center md:text-left text-gray-700 text-xl">
             Company
           </p>
-          <div className="flex flex-wrap gap-2 sm:gap-4 justify-center  md:gap-0 md:flex-col font-roboto font-light mt-5">
+          <div className="flex flex-wrap gap-2 sm:gap-4 justify-center  md:gap-0 md:flex-col font-roboto font-light my-5">
             {links.map((link) => (
               <FooterLink
                 key={link.id}
@@ -59,7 +59,7 @@ const Footer = () => {
           </div>
           <div className="py-2">
             <Image
-              src="/images/footer/web-designer-logo.svg"
+              src="/images/layout/footer/web-designer-logo.svg"
               alt=""
               width="113"
               height="43"

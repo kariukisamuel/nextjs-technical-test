@@ -11,7 +11,7 @@ const Hero = () => {
             <div className="relative w-full h-full">
               {/* Render the background image using the `Image` component with appropriate props */}
               <Image
-                src="/images/hero/hero.webp"
+                src="/images/home/hero/hero.webp"
                 alt="A scenic view of the beach"
                 role="img"
                 tabIndex={0}

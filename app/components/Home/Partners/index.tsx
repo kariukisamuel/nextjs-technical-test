@@ -41,7 +41,7 @@ const Partners = () => {
       // Try to fetch actors
       try {
         const filter="actors";
-        const res = await fetch(`/api/fetch-movies-actors?filter=${filter}&page=1`);
+        const res = await fetch(`/api/movies-actors?filter=${filter}&page=1`);
         const result = await res.json();
         const allActors: Actors[] = result.slice(0, limit);
        
