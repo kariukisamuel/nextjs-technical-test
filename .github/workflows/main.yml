@@ -47,17 +47,10 @@ jobs:
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=development --token=${{ secrets.VERCEL_TOKEN }}
 
-
-      # Step 7: Set environment variables for the build
-      # Pass the environment variables explicitly during the build process
-      - name: Build the project
-        run: |
-          VERCEL_ORG_ID=${{ secrets.VERCEL_ORG_ID }} \
-          VERCEL_PROJECT_ID=${{ secrets.VERCEL_PROJECT_ID }} \
-          TMDB_API_BASE_URL=${{ secrets.TMDB_API_URL }} \
-          TMDB_API_SECRET_KEY=${{ secrets.TMDB_API_SECRET_KEY }} \
-          vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
-
+      # Step 7: Build the project artifacts for production
+      # This generates a production build that Vercel will use to deploy
+      - name: Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
 
       # Step 8: Deploy the prebuilt artifacts to Vercel
       # The --prebuilt flag is used to deploy an already built project
