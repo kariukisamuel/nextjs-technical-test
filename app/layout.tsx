@@ -13,11 +13,13 @@ import { GoogleTagManager } from '@next/third-parties/google'
 // Create metadata tags for the application
 
 export const metadata: Metadata = {
-  title: "Home | Dreamshare", // Title of the page
-  description:
-    "Share your ultimate holiday vision and find the perfect partner to bring it to life. Explore opportunities to transform your dream vacation into reality with the ideal companion.",
+  title: "Dreamshare: Share Your Holiday Dream And Find The Perfect Partner", // Title of the page
+  description: "Share your holiday vision and find the perfect partner to make it real. Explore opportunities to turn your dream vacation into reality with an ideal companion.",
   keywords:
     "Share your ultimate holiday vision, find the perfect partner, bring it to life, explore opportunities, transform your dream vacation, reality, ideal companion, travel partner, vacation planning, adventure, explore, like-minded people, community, social network, Ultimate holiday vision, Perfect travel partner, Dream vacation companion, Transform vacation dreams, Ideal holiday companion, Share holiday vision, Find vacation partner, Dream trip transformation, Ideal vacation match, Explore holiday opportunities, Ultimate travel experience, Vacation planning partner, Perfect holiday match, Dream vacation reality, Find your travel companion",
+  alternates: {
+    canonical: 'https://nextjs-tech.vercel.app', // Define the canonical URL here
+  },
   openGraph: {
     title: "Dreamshare",
     description:
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
     url: "https://nextjs-tech.vercel.app",
     images: [
       {
-        url: '/hero/hero-background.jpg', // Assuming the image is in the public folder
+        url: 'images/home/hero/hero.jpg', // Assuming the image is in the public folder
         width: 1200,
         height: 630,
         alt: 'An awesome image for social sharing',
@@ -34,13 +36,14 @@ export const metadata: Metadata = {
     ],
     locale: 'en_US',
     type: 'website',
-},
+  },
   twitter: {
     card: "summary_large_image",
     title: "Dreamshare",
     description:
-    "Share your ultimate holiday vision and find the perfect partner to bring it to life. Explore opportunities to transform your dream vacation into reality with the ideal companion.",
-    images: '/hero/hero-background.jpg',
+      "Share your ultimate holiday vision and find the perfect partner to bring it to life. Explore opportunities to transform your dream vacation into reality with the ideal companion.",
+    images: 'images/home/hero/hero.jpg',
+
   },
 };
 
