@@ -13,10 +13,29 @@ import { GoogleTagManager } from '@next/third-parties/google'
 // Create metadata tags for the application
 
 export const metadata: Metadata = {
-  title: "Dreamshare: Share Your Holiday Dream And Find The Perfect Partner", // Title of the page
+  title: "Dreamshare: Share Your Holiday Dream And Find A Partner", // Title of the page
   description: "Share your holiday vision and find the perfect partner to make it real. Explore opportunities to turn your dream vacation into reality with an ideal companion.",
   keywords:
     "Share your ultimate holiday vision, find the perfect partner, bring it to life, explore opportunities, transform your dream vacation, reality, ideal companion, travel partner, vacation planning, adventure, explore, like-minded people, community, social network, Ultimate holiday vision, Perfect travel partner, Dream vacation companion, Transform vacation dreams, Ideal holiday companion, Share holiday vision, Find vacation partner, Dream trip transformation, Ideal vacation match, Explore holiday opportunities, Ultimate travel experience, Vacation planning partner, Perfect holiday match, Dream vacation reality, Find your travel companion",
+  icons: {
+    apple: {
+      url: '/apple-touch-icon.png',
+      sizes: '180x180',
+    },
+    icon: [
+      {
+        url: '/favicon-32x32.png',
+        sizes: '32x32',
+        type: 'image/png',
+      },
+      {
+        url: '/favicon-16x16.png',
+        sizes: '16x16',
+        type: 'image/png',
+      },
+    ],
+  },
+  manifest: '/site.webmanifest',
   alternates: {
     canonical: 'https://nextjs-tech.vercel.app', // Define the canonical URL here
   },

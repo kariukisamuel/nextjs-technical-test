@@ -39,7 +39,7 @@ const Hero = () => {
             </h1>
             {/* Render the hero section description with appropriate styling */}
             <p className="text-xl md:text-2xl text-lightAlmond mb-8 font-roboto ">
-              And find the perfect partner to fullfill it.
+              And find the perfect partner to fulfill it.
             </p>
             {/* Render a button with a call to action */}
             <a
