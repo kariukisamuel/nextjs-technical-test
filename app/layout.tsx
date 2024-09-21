@@ -53,7 +53,7 @@ export default function RootLayout({
         {children}
         {/* SpeedInsights Injection */}
         <SpeedInsights />
-        <GoogleTagManager gtmId="GTM-5ZCC7VGD" />
+        <GoogleTagManager gtmId="G-4CF355VYVN" />
       </body>
     </html>
   );
