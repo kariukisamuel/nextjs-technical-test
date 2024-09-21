@@ -1,40 +1,37 @@
-## Project Structure
-```
-.github (folder)
-├── workflows
+.github/
+├── workflows/
 │   ├── build.yml
 │   ├── deploy.yml
 │   ├── lint.yml
 │   ├── test.yml
 │   └── other-workflows.yml
-├── app (folder)
-│   ├── api
+├── app/
+│   ├── api/
 │   │   └── fetch-movies-actors.ts
-│   ├── components
-│   │   ├── common
+│   ├── components/
+│   │   ├── common/
 │   │   │   ├── AnchorSection.tsx
-│   │   │   ├── FooterLink.tsx
 │   │   │   ├── FooterLink.tsx
 │   │   │   ├── Modal.tsx
 │   │   │   └── SkeletonLoader.tsx
-│   │   ├── Home(home page components)
-│   │   │   ├── Hero
+│   │   ├── Home/
+│   │   │   ├── Hero/
 │   │   │   │   └── index.tsx
-│   │   │   ├── HolidayActivity
+│   │   │   ├── HolidayActivity/
 │   │   │   │   ├── ActivityCard.tsx
 │   │   │   │   └── index.tsx
-│   │   │   ├── HowDreamShareWorks
+│   │   │   ├── HowDreamShareWorks/
 │   │   │   │   ├── index.tsx
 │   │   │   │   └── StepCard.tsx
-│   │   │   ├── MeetAPartnerForm
+│   │   │   ├── MeetAPartnerForm/
 │   │   │   │   └── index.tsx
-│   │   │   └── Partners
+│   │   │   └── Partners/
 │   │   │       ├── index.tsx
 │   │   │       └── ProfileCard.tsx
-│   │   └── Layout
+│   │   └── Layout/
 │   │       ├── Header.tsx
 │   │       └── Footer.tsx
-│   ├── utils
+│   ├── utils/
 │   │   └── font.ts
 │   ├── favicon.ico
 │   ├── globals.css
@@ -42,18 +39,18 @@
 │   ├── page.tsx
 │   ├── robots.ts
 │   └── sitemap.ts
-├── public
-│   └── images (folder)
-│     ├── activities
-│     │   └── ...
-│     ├── footer
-│     │   └── ...
-│     ├── hero
-│     │   └── ...
-│     ├── HowDreamShareWorks
-│     │   └── ...
-│     ├── partners
-│     │   └── ...
+├── public/
+│   └── images/
+│       ├── activities/
+│       │   └── ...
+│       ├── footer/
+│       │   └── ...
+│       ├── hero/
+│       │   └── ...
+│       ├── HowDreamShareWorks/
+│       │   └── ...
+│       └── partners/
+│           └── ...
 ├── .eslintignore
 ├── .eslintrc.json
 ├── .gitignore
@@ -66,5 +63,3 @@
 ├── prettierrc.json
 ├── tailwind.config.ts (or tailwind.config.js) (Optional)
 └── tsconfig.json
-
-```
