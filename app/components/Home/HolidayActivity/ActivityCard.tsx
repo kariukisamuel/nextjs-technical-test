@@ -46,8 +46,6 @@ const ActivityCard = ({
     >
       {/* Render the image using the `Image` component */}
       <picture>
-        <source srcSet="/path/to/image.webp" type="image/webp" />
-        <source srcSet={fallBackImage} type="image/jpeg" />
         <Image
           src={image}
           alt={`${title.replace(/\s+/g, "-")}-bg-image`}
@@ -58,6 +56,7 @@ const ActivityCard = ({
           aria-label={`Activity: ${title}`}
         />
 
+        <source srcSet={fallBackImage} type="image/jpeg" />
       </picture>
 
 
