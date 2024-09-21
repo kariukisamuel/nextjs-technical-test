@@ -29,7 +29,7 @@ const HowDreamshareWorks = () => {
       try {
         // Fetch movies using the provid function
         const filter="movies";
-        const res = await fetch(`/api/fetch-movies-actors?filter=${filter}&page=1`);
+        const res = await fetch(`/api/movies-actors?filter=${filter}&page=1`);
         const result = await res.json();
         const allMovies: Movie[] = result.slice(0, limit);
 

@@ -59,7 +59,7 @@ const Footer = () => {
           </div>
           <div className="py-2">
             <Image
-              src="/images/footer/web-designer-logo.svg"
+              src="/images/layout/footer/web-designer-logo.svg"
               alt=""
               width="113"
               height="43"
