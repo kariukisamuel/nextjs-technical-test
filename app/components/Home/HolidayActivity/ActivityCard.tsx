@@ -44,11 +44,12 @@ const ActivityCard = ({
       {/* Render the image using the `Image` component */}
       <Image
         src={image}
-        alt={title}
+        alt={`${title.replace(/\s+/g, "-")}-bg-image`}
         layout="fill"
         objectFit="cover"
         objectPosition={backgroundPosition}
         quality={100}
+        aria-label={`Activity: ${title}`}
       />
 
       {/* Create a dark hover effect using absolute divs */}

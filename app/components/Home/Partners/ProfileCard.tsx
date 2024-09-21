@@ -37,7 +37,7 @@ const ProfileCard = ({ imageUrl, name, knownFor }: ProfileCardProps) => (
       <div className="absolute -bottom-5 right-0 z-10">
         <div className="bg-blazingRed border-4 border-white h-14 w-14 overflow-hidden rounded-full flex justify-center items-center">
           <Image
-            src="images/partners/movie-svgrepo-com.svg"
+            src="images/home/partners/movie-svgrepo-com.svg"
             alt={name}
             objectPosition="center"
             quality={100}

@@ -4,8 +4,7 @@ import type { Metadata } from "next";
 import { montserrat, roboto } from "./utils/fonts";
 // Import global CSS styles
 import "./globals.css";
-//import speed insights for vercel
-import { SpeedInsights } from "@vercel/speed-insights/next";
+
 
 import { GoogleTagManager } from '@next/third-parties/google'
 
@@ -51,8 +50,7 @@ export default function RootLayout({
       >
         {/* Render the children content within the body element */}
         {children}
-        {/* SpeedInsights Injection */}
-        <SpeedInsights />
+
         <GoogleTagManager gtmId="G-4CF355VYVN" />
       </body>
     </html>
