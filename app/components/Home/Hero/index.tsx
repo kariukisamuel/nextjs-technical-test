@@ -12,7 +12,7 @@ const Hero = () => {
               {/* Render the background image using the `Image` component with appropriate props */}
 
               <picture>
-                <source srcSet="/images/home/hero/hero.jpg" type="image/jpeg" />
+
                 <Image
                   src="/images/home/hero/hero.webp"
                   alt="A scenic view of the beach"
@@ -25,6 +25,7 @@ const Hero = () => {
                   priority // This tells Next.js to load the image eagerly
 
                 />
+                <source srcSet="/images/home/hero/hero.jpg" type="image/jpeg" />
               </picture>
             </div>
           </div>
