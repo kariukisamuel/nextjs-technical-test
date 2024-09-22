@@ -40,11 +40,10 @@ const Partners = () => {
     const fetchActors = async (limit: number) => {
       // Try to fetch actors
       try {
-        const filter="actors";
+        const filter = "actors";
         const res = await fetch(`/api/movies-actors?filter=${filter}&page=1`);
         const result = await res.json();
         const allActors: Actors[] = result.slice(0, limit);
-       
 
         // Simulate a 60-second delay for testing purposes (remove in production)
         // setTimeout(() => {
@@ -74,6 +73,7 @@ const Partners = () => {
     <AnchorSection
       id="meet-a-partner"
       title="Meet a partner for your best holiday"
+      ariaLabel="partner-heading"
     >
       <div className="flex justify-between mt-10 flex-wrap">
         {isLoading ? (

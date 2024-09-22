@@ -1,7 +1,7 @@
 // Import the Image component from Next.js
 import Image from "next/image";
 // Import Footer Link Conponent
-import FooterLink from "../Common/FooterLink";
+import FooterLink from "./FooterLink";
 
 // Create the Footer component
 const Footer = () => {

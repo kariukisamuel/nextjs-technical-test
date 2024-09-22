@@ -5,6 +5,7 @@ This document outlines the file and folder structure for the React project, prom
 ## Directories:
 
 ## .github (folder): (Optional)
+
 The .github/workflows directory is a crucial for project's CI/CD pipeline. It houses the main YAML file that define automated workflows to streamline development, testing, and deployment processes.
 
 ```
@@ -34,6 +35,7 @@ app/
 │   ├── robots.ts
 │   └── sitemap.ts
 ```
+
 ### app/api (folder):
 
 This folder is responsible for fetching data from external APIs. Currently, it fetches information related to movies and actors from The Movie Database (TMDB) API. The design allows for future expansion to include data retrieval from various other sources.
@@ -60,7 +62,6 @@ The actual `GET` request made to the TMDB API is structured as follows
 
 https://api.themoviedb.org/3/movie/popular?api_key=YOUR_API_KEY&language=en-US&page=1
 
-
 In this case, `movies-actors` is the name of the folder where `route.ts` is defined.
 
 #### Security Considerations
@@ -78,6 +79,7 @@ This folder houses all of the components used throughout the application. It is 
 #### Common
 
 The **common** folder contains reusable components that can be used anywhere in the application. This includes items such as:
+
 - AnchorSection.tsx: This component handles the creation of anchor sections with titles, descriptions, and genral layout.
 - FooterLink.tsx: This component could be used to render individual links in the footer of your application.
 - Modal.tsx: This component would provide a modal dialog for displaying content or capturing user input.
@@ -99,18 +101,18 @@ These components are designed for flexibility and consistency, ensuring that the
 The **Home** folder is dedicated to components specific to the home page. It contains all elements that make up the landing experience for users, such as:
 
 - Hero: This folder might house components related to the hero section of the home page.
-    - index.tsx: The main component for the hero section.
+  - index.tsx: The main component for the hero section.
 - HolidayActivity: This folder could contain components for displaying holiday activities.
-    - ActivityCard.tsx: A component for rendering individual activity cards.
-    - index.tsx: The main component for the holiday activity section.
+  - ActivityCard.tsx: A component for rendering individual activity cards.
+  - index.tsx: The main component for the holiday activity section.
 - HowDreamShareWorks: This folder contain components related to explaining how the "Dream Share" feature works.
-    - index.tsx: The main component for the "How Dream Share Works" section.
-    - StepCard.tsx: A component for displaying individual steps in the process.
+  - index.tsx: The main component for the "How Dream Share Works" section.
+  - StepCard.tsx: A component for displaying individual steps in the process.
 - MeetAPartnerForm: This folder could contain components for a form where users can meet partners.
-    - index.tsx: The main component for the partner form.
+  - index.tsx: The main component for the partner form.
 - Partners: This folder might contain components related to displaying partners or profiles.
-    - index.tsx: The main component for the partners section.
-    - ProfileCard.tsx: A component for rendering individual partner profiles.
+  - index.tsx: The main component for the partners section.
+  - ProfileCard.tsx: A component for rendering individual partner profiles.
 
 This nested structure helps organize components related to specific sections of your home page, making the code more modular and easier to manage.
 
@@ -142,7 +144,9 @@ The **Layout** folder holds components related to the overall structure of the a
 ```
 
 #### Utils
+
 This folder houses utility functions that can be reused across different parts of your project.At the moment it has:
+
 - font.ts that contains functions or configurations related to fonts used in the application. It handles font loading, font family definitions, or other font-related tasks.
 
 ```
@@ -152,37 +156,52 @@ This folder houses utility functions that can be reused across different parts o
 
 ## Files
 
-│   ├── favicon.ico
-│   ├── globals.css
-│   ├── layout.tsx
-│   ├── page.tsx
-│   ├── robots.ts
-│   └── sitemap.ts
-
+│ ├── favicon.ico
+│ ├── globals.css
+│ ├── layout.tsx
+│ ├── page.tsx
+│ ├── robots.ts
+│ └── sitemap.ts
 
 #### favicon.ico
+
 The favicon for the web application.
 
 #### globals.css
+
 A global CSS file for styling elements that are used throughout the application.
 
 #### layout.tsx
+
 This file defines the overall layout or structure of the application, possibly including navigation, header, footer, and other common elements.
 
 #### page.tsx
-This file might is the main entry point or landing page of your application.
+
+This file might is the main entry point or landing page of your application. To create a new page create a folder with the name of the route. The folder name will correspond to the route URL.
+For example, if you want to create a route for /about, create an app/about/ folder.Inside the newly created folder, add a page.tsx file. This file will be rendered when the user navigates to the corresponding route. In the page.tsx file, export a function as the default component that returns the JSX for the page. You can dynamically display the route name if you wish
+
+```
+export default function Page() {
+  return <h1>{route}</h1>
+}
+```
 
 #### robots.ts
+
 This file probably handles configuration related to web crawlers like Googlebot, specifying which parts of your website should or should not be indexed.
 
 #### sitemap.ts
+
 This file generates a sitemap, which helps search engines understand the structure and content of your website.
 
-
 ## public(folder):
+
 This folder contains all static assets, such as images and fonts, used by the application. Currently, it only includes an images folder.
+
 ### public/images (folder):
+
 The images folder is organized into subfolders, each representing different sections or components of the application. These subfolders help maintain structure and keep assets relevant to their respective components.
+
 ```
 ├── public/
 │   └── images/
@@ -200,45 +219,61 @@ The images folder is organized into subfolders, each representing different sect
 |       ├── layout/
 │       |    ├── footer/
 ```
+
 ## Root files
- This include:
+
+This include:
+
 ### .eslintignore
+
 Specifies files and directories that should be ignored by ESLint during linting, helping to avoid unnecessary checks on generated or external files.
 
 ### .eslintrc.json
+
 The configuration file for ESLint, defining rules, environments, and settings to enforce consistent code quality and style throughout the project.
 
 ### .gitignore
+
 Specifies which files and directories Git should ignore. These are usually files that are generated automatically (e.g., build files, node_modules) and don't need to be committed to version control.
 
 ### README.md
+
 A markdown file providing an overview of the project, including instructions for installation, usage, and other relevant documentation.
 
 ### eslint.config.mjs (Optional)
+
 An alternative configuration file for ESLint using ES modules (with .mjs extension). It allows configuring ESLint with modern JavaScript module syntax.
 
 ### next.config.mjs (or next.config.js)
+
 The configuration file for Next.js, defining custom build configurations, routing, environment variables, and other project-specific settings.
 
 ### package-lock.json
+
 A lock file generated by npm that captures the exact versions of dependencies installed in the project, ensuring consistent installs across different environments.
 
 ### package.json
+
 A manifest file for the project, containing metadata like the project name, version, scripts, dependencies, and other configurations for npm packages.
 
 ### postcss.config.mjs (Optional)
+
 Configuration for PostCSS, a tool used for transforming CSS with JavaScript plugins. This file defines PostCSS plugins used for tasks like autoprefixing or minification.
 
 ### prettierrc.json
+
 Configuration file for Prettier, defining rules for code formatting such as line length, indentation, and single or double quotes to ensure consistent code styling.
 
 ### tailwind.config.ts (or tailwind.config.js) (Optional)
+
 Configuration for Tailwind CSS. It defines custom styles, themes, and plugins used throughout the project. This file allows for customization of the Tailwind utility classes.
 
 ### tsconfig.json
+
 The configuration file for TypeScript, defining compiler options and settings like paths, strictness, and module resolution for the TypeScript compiler.
 
 # Overrall Project Structure
+
 ```
 .github/
 ├── workflows/

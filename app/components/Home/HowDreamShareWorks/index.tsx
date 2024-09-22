@@ -28,7 +28,7 @@ const HowDreamshareWorks = () => {
     const fetchMoviesWithLimit = async (limit: number) => {
       try {
         // Fetch movies using the provid function
-        const filter="movies";
+        const filter = "movies";
         const res = await fetch(`/api/movies-actors?filter=${filter}&page=1`);
         const result = await res.json();
         const allMovies: Movie[] = result.slice(0, limit);
@@ -82,6 +82,7 @@ const HowDreamshareWorks = () => {
     <AnchorSection
       id="how-dreamshare-works"
       title="How Dreamshare works?"
+      ariaLabel="how-dreamshare-works-heading"
       ref={sectionPopular}
     >
       <div className="flex justify-between mt-10 flex-wrap">

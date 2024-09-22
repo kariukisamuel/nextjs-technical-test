@@ -28,8 +28,6 @@ interface ModalProps {
  */
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
-
-
   // Handle Escape key to close the modal
   useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {
@@ -49,7 +47,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
       document.removeEventListener("keydown", handleEsc);
     };
   }, [isOpen, onClose]);
-
 
   // Do not render the modal if it's not open.
   if (!isOpen) return null;
