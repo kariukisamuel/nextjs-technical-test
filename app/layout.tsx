@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: "https://nextjs-tech.vercel.app",
     images: [
       {
-        url: '/hero/hero-background.jpg', // Assuming the image is in the public folder
+        url: 'images/home/hero/hero.jpg', // Assuming the image is in the public folder
         width: 1200,
         height: 630,
         alt: 'An awesome image for social sharing',
@@ -40,7 +40,8 @@ export const metadata: Metadata = {
     title: "Dreamshare",
     description:
     "Share your ultimate holiday vision and find the perfect partner to bring it to life. Explore opportunities to transform your dream vacation into reality with the ideal companion.",
-    images: '/hero/hero-background.jpg',
+    images: 'images/home/hero/hero.jpg',
+    
   },
 };
 
