@@ -11,6 +11,8 @@ type ActivityCardProps = {
   width: keyof WidthVariants;
   // Required property for the image URL
   image: string;
+  // Required property for the image URL
+  fallBackImage: string;
   // Required property for the card title
   title: string;
   // Required property for background positioning
@@ -21,6 +23,7 @@ type ActivityCardProps = {
 const ActivityCard = ({
   width = "sm",
   image,
+  fallBackImage,
   title,
   backgroundPosition,
 }: ActivityCardProps) => {
@@ -42,15 +45,22 @@ const ActivityCard = ({
       aria-label={`View Activity details: ${title}`}
     >
       {/* Render the image using the `Image` component */}
-      <Image
-        src={image}
-        alt={`${title.replace(/\s+/g, "-")}-bg-image`}
-        layout="fill"
-        objectFit="cover"
-        objectPosition={backgroundPosition}
-        quality={100}
-        aria-label={`Activity: ${title}`}
-      />
+      <picture>
+        <source srcSet="/path/to/image.webp" type="image/webp" />
+        <source srcSet={fallBackImage} type="image/jpeg" />
+        <Image
+          src={image}
+          alt={`${title.replace(/\s+/g, "-")}-bg-image`}
+          layout="fill"
+          objectFit="cover"
+          objectPosition={backgroundPosition}
+          quality={100}
+          aria-label={`Activity: ${title}`}
+        />
+
+      </picture>
+
+
 
       {/* Create a dark hover effect using absolute divs */}
       <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition duration-300 ease-in-out"></div>
