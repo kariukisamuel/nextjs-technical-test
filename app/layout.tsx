@@ -6,6 +6,7 @@ import { montserrat, roboto } from "./utils/fonts";
 import "./globals.css";
 
 
+
 import { GoogleTagManager } from '@next/third-parties/google'
 
 
@@ -21,17 +22,25 @@ export const metadata: Metadata = {
     title: "Dreamshare",
     description:
       "Share your ultimate holiday vision and find the perfect partner to bring it to life. Explore opportunities to transform your dream vacation into reality with the ideal companion.",
-    images:
-      "https://nextjs-tech.vercel.app/_next/image?url=%2Fimages%2Fhero%2Fhero.webp&w=1920&q=100",
+    siteName: "Dreamshare",
     url: "https://nextjs-tech.vercel.app",
-  },
+    images: [
+      {
+        url: '/hero/hero-background.jpg', // Assuming the image is in the public folder
+        width: 1200,
+        height: 630,
+        alt: 'An awesome image for social sharing',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+},
   twitter: {
     card: "summary_large_image",
     title: "Dreamshare",
     description:
-      "Share your ultimate holiday vision and find the perfect partner to bring it to life. Explore opportunities to transform your dream vacation into reality with the ideal companion.",
-    images:
-      "https://nextjs-tech.vercel.app/_next/image?url=%2Fimages%2Fhero%2Fhero.webp&w=1920&q=100",
+    "Share your ultimate holiday vision and find the perfect partner to bring it to life. Explore opportunities to transform your dream vacation into reality with the ideal companion.",
+    images: '/hero/hero-background.jpg',
   },
 };
 
