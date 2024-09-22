@@ -24,6 +24,7 @@ const MeetAPartnerForm = () => {
                   type="text"
                   placeholder="Enter your interests"
                   aria-label="Enter your interests"
+                  required
                 />
               </div>
               <div className="w-full h-[48px] sm-md:w-[35%] md:w-[30%]">

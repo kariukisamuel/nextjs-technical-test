@@ -22,9 +22,12 @@ async function fetchMovies(limit: number): Promise<Movie[]> {
     throw new Error("API Base URL is not defined");
   }
   const filter = "movies";
-  const res = await fetch(`${baseUrl}/api/movies-actors?filter=${filter}&page=1`, {
-    next: { revalidate: 86400 }, // Revalidate once every 24 hours (86400 seconds)
-  })
+  const res = await fetch(
+    `${baseUrl}/api/movies-actors?filter=${filter}&page=1`,
+    {
+      next: { revalidate: 86400 }, // Revalidate once every 24 hours (86400 seconds)
+    },
+  );
   const result: Movie[] = await res.json();
   return result.slice(0, limit);
 }
@@ -37,12 +40,14 @@ const HowDreamshareWorks = async () => {
       title="How Dreamshare works?"
       ariaLabel="how-dreamshare-works-heading"
     >
-      <Suspense fallback=
-        {
+      <Suspense
+        fallback={
           <div className="w-full flex flex-col md:flex-row justify-between">
-
             {Array.from({ length: 3 }, (_, index) => (
-              <div className="w-full sm:w-[50%] md:w-[50%] lg:w-[23.5%]" key={index}>
+              <div
+                className="w-full sm:w-[50%] md:w-[50%] lg:w-[23.5%]"
+                key={index}
+              >
                 <div className="flex justify-center my-5">
                   <SkeletonLoader
                     width="w-[128px]"
@@ -53,10 +58,9 @@ const HowDreamshareWorks = async () => {
                 <SkeletonLoader width="w-full" height="h-[128px]" />
               </div>
             ))}
-
           </div>
-
-        }>
+        }
+      >
         <MovieProfile movies={movies} />
       </Suspense>
     </AnchorSection>

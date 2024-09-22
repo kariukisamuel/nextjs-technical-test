@@ -55,10 +55,10 @@ View the metatags below:
 
 ```
 
+
 ## 2. Page Quality (Score 70%)
 
 ##### Passed Checks
-
 1. The page contains 519 words. (Okay)
 2. The page contains a listing, indicating a good text layout.
 3. 4 paragraphs were found on this page.
@@ -66,16 +66,15 @@ View the metatags below:
 5. There are no duplicates on the site.
 6. The average number of words per sentence is 15.6, which is good.
 7. This page does not use a frameset.
-
 ##### Failed Checks
-
 1. Some words from the H1 heading are not used in the page content.
 2. 28.7% of the text consists of stop words.
+
 
 ## 3. Page structure (Score 100%)
 
 1. The H1 heading is perfect.
-2. The heading structure is perfect.
+2. The heading structure is perfect. 
 
 ```
 ## Heading structure
@@ -87,7 +86,6 @@ View the metatags below:
 | **H2**        | Meet a Partner for Your Best Holiday    |
 | **H2**        | Discover Holiday Activity Ideas          |
 | **H2**        | Create Your Holiday Activity             |
-| **H3**        | Dreamshare                              |
 | **H3**        | Sports and Activities                    |
 | **H3**        | Wellness and Health                      |
 | **H3**        | Extreme Sports and Expeditions           |
@@ -96,34 +94,29 @@ View the metatags below:
 | **H3**        | Enjoyment and Relaxation                 |
 | **H3**        | Travelling                               |
 ```
-
 ## 4. Link structure (Score 70%)
 
 ###### Failed Checks:
-
 1. There are too few (7) internal links on the page.
 2. There are no external links on the page.
 
 ###### Passed Checks:
-
 1.  Every linktext is unique.
 2.  None of the anchor texts is too long.
 3.  All internal links are not using dynamic parameters.
 
-| Link                                                                   | Attributes | Anchor text               |
-| ---------------------------------------------------------------------- | ---------- | ------------------------- |
-| [https://nextjs-tech.vercel.app/](https://nextjs-tech.vercel.app/)     | Anchor     | Find your holiday partner |
-| [/about](https://nextjs-tech.vercel.app/about)                         |            | About                     |
-| [/contact](https://nextjs-tech.vercel.app/contact)                     |            | Contact                   |
-| [/press](https://nextjs-tech.vercel.app/press)                         |            | Press                     |
-| [/blog](https://nextjs-tech.vercel.app/blog)                           |            | Blog                      |
-| [/terms-and-privacy](https://nextjs-tech.vercel.app/terms-and-privacy) |            | Terms and Privacy         |
-| [/help](https://nextjs-tech.vercel.app/help)                           |            | Help                      |
+| Link                                                                                                                                       | Attributes               | Anchor text            |
+|--------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|------------------------|
+| [https://nextjs-tech.vercel.app/](https://nextjs-tech.vercel.app/) | Anchor                   | Find your holiday partner |
+| [/about](https://nextjs-tech.vercel.app/about)                  |                          | About                  |
+| [/contact](https://nextjs-tech.vercel.app/contact)               |                          | Contact                |
+| [/press](https://nextjs-tech.vercel.app/press)                   |                          | Press                  |
+| [/blog](https://nextjs-tech.vercel.app/blog)                    |                          | Blog                   |
+| [/terms-and-privacy](https://nextjs-tech.vercel.app/terms-and-privacy) |                          | Terms and Privacy      |
+| [/help](https://nextjs-tech.vercel.app/help)                    |                          | Help                   |
 
 ## 5. Server configuration (Score 100%)
-
 ###### Passed Checks:
-
 1. The checked page does not redirect to another URL.
 2. The redirect of URLs with www and non-www subdomain is configured correctly.
 3. No X-Powered HTTP header is sent.
@@ -134,20 +127,17 @@ View the metatags below:
 8. All included files are also transferred via HTTPS.
 
 ## 6. External factors (Score 100%)
-
 ###### Passed Checks:
-
 1. This website is not classified "for adult only".
 2. Robot.txt was found
 3. Sitemap.xml was found.
 
 ###### Failed Checks:
-
 1. No backlinks to this page.
 2. The page has 0 shares and comments on Social Media.
 
-###### Most important keywords
 
+###### Most important keywords
 Top relevant keywords:
 
 1. holiday6 times Relevance 88%
@@ -157,15 +147,11 @@ Top relevant keywords:
 5. holiday dream and find the perfect partner 1 times Relevance 60%
 
 ## 7. Mobile optimization
-
 ##### Passed Checks
-
 1. A viewport "width=device-width,initial-scale=1" is provided.
 2. At least one Apple touch icon is specified.
-3. The usage of strong and bold tags is perfect.
-
+3. The usage of strong and bold tags is perfect. 
 ##### Failed Checks
-
 1. This page loads 7 JavaScript files. This may affect the load time negatively.
 
 ## How would i increase seo:
@@ -176,33 +162,7 @@ Top relevant keywords:
 - I would ensure all content is relatable, as the current website confuses users by mixing movies and holiday activities on the same page.
 - I would also do a check to see how keywords are used in content.
 
-# Semantics
 
-Using a [Semantic Validator](https://validator.w3.org/) i verified that all semantic html is ok . Check results [here](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fnextjs-tech.vercel.app%2F)
 
-Found links on this page
 
-speed
-UX & Performance Metrics
-Mobile
-Desktop
-First Contentful Paint
-0.8s
-thumb_up
-Time to Interactive
-5.8s
-error
-Speed Index
-0.8s
-thumb_up
-Total Blocking Time
-110.0ms
-thumb_up
-Largest Contentful Paint
-bookmark
-4.2s
-error
-Cumulative Layout Shift
-bookmark
-0.00
-thumb_up
+

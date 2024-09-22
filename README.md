@@ -1,4 +1,4 @@
-# W-F-D Technical Challenge Round
+# Technical Challenge Round
 
 Implementation of a responsive, seo friendly website.
 
@@ -50,7 +50,8 @@ bun install
 
 ```
 TMDB_API_URL=https://api.themoviedb.org/3/
-TMDB_API_SECRET_KEY={your_key}
+TMDB_API_SECRET_KEY={replace_with_your_key}
+NEXT_PUBLIC_API_BASE_URL={replace_with_your_website_domain}
 ```
 
 4. After setting up spin up the development server
@@ -75,12 +76,12 @@ To get started with this project, please refer to the [Setup Instructions](docum
 
 ## Documentation
 
-You can find detailed the documentation on this links: 
+You can find detailed the documentation on this links:
 
-1. [Getting Started](documentation/accessibility.md)
+1. [Getting Started](documentation/setup.md)
 2. [Project Structure](documentation/project-structure.md)
-2. [Seo](documentation/accessibility.md)
-3. [Accessibility](documentation/accessibility.md)
+3. [Seo](documentation/seo.md)
+4. [Accessibility](documentation/accessibility.md)
 
 However, please read on for an overview before diving deeper into the documentation.
 
@@ -94,7 +95,7 @@ From the Figma design provided we have 3 major screen sizes:
 - Tablet (768px)
 - Desktop (1200px)
 
-The developed design is fully responsive and corresponds to the break points with an added responsive breakpoint of  600px(small tablet devices) - 768px (Large tablets) below 600px widths are treated as normal mobile devices and respond uniformly across small devices.
+The developed design is fully responsive and corresponds to the break points with an added responsive breakpoint of 600px(small tablet devices) - 768px (Large tablets) below 600px widths are treated as normal mobile devices and respond uniformly across small devices.
 
 This are my Tailwind breakpoints:
 
@@ -109,23 +110,26 @@ This are my Tailwind breakpoints:
     },
 ```
 
-#### Cross Browser Test Results
+#### Cross Browser & Devices Test Results
+
+Did tests on devices listed in the dev tools simulator. The app was responsive and compatible across many devices.
 
 Using Sauce Labs, I was able to test the web application on the following platforms:
 
-| Android Version | Platform                | Pass | Fail |
-|-----------------|-------------------------|------|------|
-| 15              | Android                 | -    |      |
-| 13              | Android                 | -    |      |
-| 12              | Android                 | -    |      |
-| 11              | Android                 | -    |      |
-| 10              | Android                 | -    |      |
-| 9               | Android                 | -    |      |
-| 8               | Android                 | -    |      |
-| 7.1             | Android                 |      | x    |
-| 7.0             | Android                 |      | x    |
-| 6.0             | Android                 |      | x    |
-| 5.1             | Android GoogleAPI Emulator |  | x    |
+| Android Version | Platform                   | Pass | Fail |
+| --------------- | -------------------------- | ---- | ---- |
+| 15              | Android                    | -    |      |
+| 13              | Android                    | -    |      |
+| 12              | Android                    | -    |      |
+| 11              | Android                    | -    |      |
+| 10              | Android                    | -    |      |
+| 9               | Android                    | -    |      |
+| 8               | Android                    | -    |      |
+| 7.1             | Android                    |      | x    |
+| 7.0             | Android                    |      | x    |
+| 6.0             | Android                    |      | x    |
+| 5.1             | Android GoogleAPI Emulator |      | x    |
+
 
 
 ### 2. HTML/SEO Semantic Structure
@@ -162,7 +166,7 @@ The website leverages semantic HTML to enhance both accessibility and SEO. Seman
 
             <!-- Section showcasing holiday activity ideas -->
             <section id="discover-holiday-activity-ideas" aria-labelledby="activities-heading">
-                <h2 id="activities-heading">....</h2>    
+                <h2 id="activities-heading">....</h2>
             </section>
 
             <!-- Section with a form for users to create their own holiday -->
@@ -177,7 +181,6 @@ The website leverages semantic HTML to enhance both accessibility and SEO. Seman
 </html>
 
 ```
-The semantics are validated using W3Validator. Find semantic validation results [Here](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fnextjs-tech.vercel.app%2F) 
 
 #### Heading structure
 
@@ -200,7 +203,6 @@ The semantics are validated using W3Validator. Find semantic validation results 
 
 Review the detailed steps implemented to enhance the page's SEO. [Read Complete Seo Documentation](documentation/seo.md)
 
-
 ### 3. Codebase Organization, Modularity, and Maintainability
 
 #### Folder Structure and Code Organization
@@ -211,7 +213,6 @@ The folder structure has been organized to promote separation of concerns. Hereâ
 - **Common Components**: Reusable components that may be used across different pages can be found in `app/components/Common`.
 - **Layout Components**: Components that define the page layout, such as the header and footer, are placed in `app/components/Layout`.
 - **Images**: Images are organized in the `public/image/{component}` directory, further separating concerns.
-
 
 #### Tailwind CSS Usage
 
@@ -234,12 +235,12 @@ To maintain uniformity, this code is formatted using Prettier. Tailwind classes 
 
 By grouping classes in this manner, the code becomes easier to read and maintain. Prettier also formats all files to ensure consistent styling throughout the codebase.
 
-
-####  Page.tsx (Main Entry Point of the Application)
+#### Page.tsx (Main Entry Point of the Application)
 
 Page.tsx serves as the main entry point of the application, its the index page. To create another page, follow these steps:
 
-1. **Create a Folder**: Name the folder according to the route you want to create. The folder name will correspond to the route URL. 
+1. **Create a Folder**: Name the folder according to the route you want to create. The folder name will correspond to the route URL.
+
    - For example, to create a route for `/about`, create a folder at `app/about/`.
 
 2. **Add a Page File**: Inside the newly created folder, add a file named `page.tsx`. This file will be rendered when the user navigates to the corresponding route.
@@ -260,7 +261,7 @@ For in depth details on the Project structure [Read Here](documentation/project-
 
 ### 4. SEO Meta Tags and Schema Markup
 
-# Meta Tags and SEO Audit
+#### Meta Tags and SEO Audit
 
 I have added the following relevant meta tags to enhance SEO:
 
@@ -293,7 +294,7 @@ Two tools were used to test accessibility. This are:
 1. https://www.accessibilitychecker.org/ find the test result [here](https://www.accessibilitychecker.org/audit/?website=https%3A%2F%2Fnextjs-tech.vercel.app%2F&flag=ww)
 2. Accessibility Insights For Chrome. You can download it [here](https://accessibilityinsights.io/downloads/) and run the manual tests.
 
-As a result the website scores very high on accessibility for  For a detailed audit report on acccesibility. [Click Here](documentation/accessibility.md)
+As a result the website scores very high on accessibility for For a detailed audit report on acccesibility. [Click Here](documentation/accessibility.md)
 
 ### 6. Github & Application Deployment
 
@@ -320,6 +321,7 @@ env:
   # Custom API environment variables
   API_BASE_URL: ${{ secrets.TMDB_API_URL }}
   API_KEY: ${{ secrets.TMDB_API_SECRET_KEY }}
+  NEXT_PUBLIC_API_BASE_URL: ${{ secrets.NEXT_PUBLIC_API_BASE_URL }} 
 
 on:
   # Trigger deployment on every push to the 'main' branch
@@ -374,7 +376,3 @@ jobs:
 ### 6. Google Tag Manager & Google Analytics
 
 ### 8. Page Speed Insights or Lighthouse Report
-
-
-
-

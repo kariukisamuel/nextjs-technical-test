@@ -4,7 +4,6 @@
 import { useState, useRef } from "react";
 import MovieCard from "./MovieCard";
 
-
 // Define an interface for the movie data structure
 interface Movie {
   id: number;
@@ -18,7 +17,9 @@ interface Props {
 // Create the `MoviesProfile` functional component
 const MovieProfile = ({ movies }: Props) => {
   // Define state variables for managing data and UI state
-  const [visibleMovies, setVisibleMovies] = useState<Movie[]>(movies.slice(0, 3));
+  const [visibleMovies, setVisibleMovies] = useState<Movie[]>(
+    movies.slice(0, 3),
+  );
   const [count, setCount] = useState(3); // Number of movies to display initially
   const sectionPopular = useRef<HTMLDivElement>(null); // Reference to the section element
 
@@ -42,10 +43,8 @@ const MovieProfile = ({ movies }: Props) => {
     ref.current?.scrollIntoView({ behavior: "smooth" }); // Scroll smoothly
   };
 
-
   // Return the JSX structure for rendering the section
   return (
-
     <>
       <div className="flex justify-between mt-10 flex-wrap">
         {
@@ -80,7 +79,6 @@ const MovieProfile = ({ movies }: Props) => {
         )}
       </div>
     </>
-
   );
 };
 

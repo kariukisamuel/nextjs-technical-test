@@ -4,8 +4,9 @@ import type { Metadata } from "next";
 import { montserrat, roboto } from "./utils/fonts";
 // Import global CSS styles
 import "./globals.css";
+//
+import { GoogleAnalytics } from '@next/third-parties/google'
 
-import { GoogleTagManager } from "@next/third-parties/google";
 
 // Create metadata tags for the application
 
@@ -69,6 +70,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   // Return the JSX structure for rendering the root layout
   return (
     <html lang="en">
@@ -78,8 +80,9 @@ export default function RootLayout({
       >
         {/* Render the children content within the body element */}
         {children}
+        
+        <GoogleAnalytics gaId="G-4CF355VYVN" />
 
-        <GoogleTagManager gtmId="G-4CF355VYVN" />
       </body>
     </html>
   );

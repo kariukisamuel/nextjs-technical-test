@@ -8,8 +8,7 @@ env:
   # Custom API environment variables
   API_BASE_URL: ${{ secrets.TMDB_API_URL }}
   API_KEY: ${{ secrets.TMDB_API_SECRET_KEY }}
-  NEXT_PUBLIC_API_BASE_URL:  ${{ secrets.NEXT_PUBLIC_API_BASE_URL }}
-
+  NEXT_PUBLIC_API_BASE_URL: ${{ secrets.NEXT_PUBLIC_API_BASE_URL }}
 
 on:
   # Trigger deployment on every push to the 'main' branch
