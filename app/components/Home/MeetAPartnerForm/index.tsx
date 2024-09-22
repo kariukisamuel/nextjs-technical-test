@@ -7,6 +7,7 @@ const MeetAPartnerForm = () => {
     <AnchorSection
       id="create-your-holiday-form"
       title="Create your holiday activity"
+      ariaLabel="create-your-holiday-form-heading"
     >
       <div>
         <p className="font-roboto text-center text-base sm:text-xl mt-10">

@@ -9,7 +9,6 @@ const FooterLink = ({ href, ariaLabel, name }: FooterLinkProps) => {
       href={href}
       className="py-1 px-3 text-slate-500 text-base hover:text-white hover:bg-blazingRed"
       aria-label={ariaLabel}
-      role="link"
     >
       {name}
     </a>

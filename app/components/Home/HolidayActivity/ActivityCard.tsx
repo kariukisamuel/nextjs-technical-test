@@ -59,8 +59,6 @@ const ActivityCard = ({
         <source srcSet={fallBackImage} type="image/jpeg" />
       </picture>
 
-
-
       {/* Create a dark hover effect using absolute divs */}
       <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition duration-300 ease-in-out"></div>
       <div className="absolute inset-0 bg-black bg-opacity-10"></div>

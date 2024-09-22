@@ -1,5 +1,5 @@
 // app/api/movies-actors/route.ts
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
 interface Movie {
   id: number;
@@ -22,10 +22,13 @@ interface Actors {
 // Define config for API URL and API Key
 const config = {
   apiUrl: process.env.TMDB_API_URL,
-  apiKey: process.env.TMDB_API_SECRET_KEY,  // Using an environment variable for the API key
+  apiKey: process.env.TMDB_API_SECRET_KEY, // Using an environment variable for the API key
 };
 
-const buildUrl = (path: string, params: { api_key: string; language: string }): string => {
+const buildUrl = (
+  path: string,
+  params: { api_key: string; language: string },
+): string => {
   const urlParams = new URLSearchParams(Object.entries(params));
   return `${config.apiUrl}${path}?${urlParams.toString()}`;
 };
@@ -44,13 +47,13 @@ const popularActorsUrl = buildUrl("person/popular", {
 export async function GET(request: Request) {
   // Extract query params (filter, page) from the request URL
   const { searchParams } = new URL(request.url);
-  const filter = searchParams.get('filter') as "movies" | "actors";  // Type narrowing
-  const page = searchParams.get('page') || '1'; // Default page 1
+  const filter = searchParams.get("filter") as "movies" | "actors"; // Type narrowing
+  const page = searchParams.get("page") || "1"; // Default page 1
 
   try {
     // Choose URL based on the filter (either movies or actors)
     const fetchUrl = filter === "movies" ? popularMoviesUrl : popularActorsUrl;
-    
+
     // Fetch the data from the external API
     const res = await fetch(`${fetchUrl}&page=${page}`, { method: "GET" });
 
@@ -60,11 +63,14 @@ export async function GET(request: Request) {
 
     // Parse the response
     const data = await res.json();
-    const results = filter === "movies" ? data.results as Movie[] : data.results as Actors[];
+    const results =
+      filter === "movies"
+        ? (data.results as Movie[])
+        : (data.results as Actors[]);
 
-    return NextResponse.json(results);  // Respond with the data as JSON
+    return NextResponse.json(results); // Respond with the data as JSON
   } catch (error) {
     console.error("Error fetching data:", error);
-    return NextResponse.error();  // Return a generic server error response
+    return NextResponse.error(); // Return a generic server error response
   }
 }

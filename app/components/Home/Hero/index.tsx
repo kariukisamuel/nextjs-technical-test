@@ -4,7 +4,7 @@ import Image from "next/image";
 const Hero = () => {
   // Return the JSX structure for rendering the hero section
   return (
-    <section id="hero">
+    <section id="hero" aria-labelledby="hero-heading">
       <div className="relative bg-gradient-to-r from-blazingRed  to-blazingYellow h-[85vh] md:h-screen">
         <div className="h-full">
           <div className="absolute inset-0">
@@ -12,7 +12,6 @@ const Hero = () => {
               {/* Render the background image using the `Image` component with appropriate props */}
 
               <picture>
-
                 <Image
                   src="/images/home/hero/hero.webp"
                   alt="A scenic view of the beach"
@@ -23,18 +22,18 @@ const Hero = () => {
                   objectPosition="center"
                   quality={100}
                   priority // This tells Next.js to load the image eagerly
-
                 />
                 <source srcSet="/images/home/hero/hero.jpg" type="image/jpeg" />
               </picture>
             </div>
           </div>
 
-          <div
-            className="relative mx-auto w-[96%] lg:w-[70%] z-10 flex flex-col h-full justify-center items-center text-center"
-          >
+          <div className="relative mx-auto w-[96%] lg:w-[70%] z-10 flex flex-col h-full justify-center items-center text-center">
             {/* Render the hero section title with appropriate styling */}
-            <h1 className="text-3xl md:text-5xl text-white uppercase  font-bold leading-normal mb-4 font-montserrat">
+            <h1
+              id="hero-heading"
+              className="text-3xl md:text-5xl text-white uppercase  font-bold leading-normal mb-4 font-montserrat"
+            >
               Share Your <br></br>
               Holiday Dream
             </h1>

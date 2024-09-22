@@ -11,6 +11,7 @@ const HolidayActivity = () => {
     <AnchorSection
       id="discover-holiday-activity-ideas"
       title="Discover holiday activity ideas"
+      ariaLabel="activities-heading"
     >
       <div className="flex justify-between mt-10 flex-wrap">
         {/* Render multiple `ActivityCard` components with different images and titles */}

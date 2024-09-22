@@ -2,7 +2,6 @@
 
 To get this project up and running on your local machine, follow these steps:
 
-
 1. ### Installation Instructions
 
 First, ensure you have Node.js installed. If it's not installed, you can install the latest version using the following command:
@@ -18,6 +17,7 @@ choco install nodejs
 https://nodejs.org/
 
 ```
+
 2. Clone the repository:
 
 ```bash
@@ -29,6 +29,7 @@ gh repo clone kariukisamuel/nextjs-technical-test
 https://github.com/kariukisamuel/nextjs-technical-test.git
 
 ```
+
 2. Install the project dependencies by running one of the following commands:
 
 ```bash
@@ -45,10 +46,11 @@ bun install
 
 ```
 TMDB_API_URL=https://api.themoviedb.org/3/
-TMDB_API_SECRET_KEY={your_key} 
+TMDB_API_SECRET_KEY={your_key}
 ```
 
 4. After setting up spin up the development server
+
 ```bash
 npm install
 # or
