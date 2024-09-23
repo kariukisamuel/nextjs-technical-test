@@ -2,6 +2,51 @@
 
 Implementation of a responsive, seo friendly website.
 
+## Project Overview
+This application is statically generated and uses Incremental Static Regeneration (ISR) to fetch data. ISR was a key factor in choosing Next.js over Gatsby, as it allows pages to be statically generated and updated in the background when new data is available, without requiring a complete site rebuild. For example, I’ve set the movies and actors API to revalidate and refetch data every 24 hours, ensuring the trending movies list is refreshed daily.
+
+Currently, I am working with limited data, fetching only the first page of the movies API. However, if I were to fully leverage the API and retrieve all available data, Server-Side Rendering (SSR) would be a better choice due to the API structure. Fetching multiple pages, such as up to page 100, would require generating all these pages statically during the build process, leading to long build times and increased deployment overhead.
+
+## Why choose Next Js over Gatsby js ?
+
+1. I chose Next.js over Gatsby for its flexibility to scale, combining Static Site Generation (SSG), Server-Side Rendering (SSR), and dynamic content effectively. While Gatsby supports SSR, it's not its primary focus.
+
+2. Next.js features Incremental Static Regeneration, allowing pages to be updated in the background without rebuilding the entire site, while Gatsby requires a complete rebuild, which can be slow for larger sites.
+
+3. Data fetching in Next.js is simpler, while Gatsby relies on a GraphQL layer.
+
+4. Next.js has a larger and more diverse ecosystem built on React, whereas Gatsby focuses mainly on static sites, often leading to TypeScript errors with various packages.
+
+5. Next.js includes built-in API routes for server-side logic like form submissions and authentication, while Gatsby lacks native API route support.
+
+6. While both Gatsby and Next.js offer optimized image features—Gatsby with `<GatsbyImage>` and `<StaticImage>`, and Next.js with the `<Image>` component—it's generally easier to work with images in Next.js since there’s no need to use GraphQL to fetch them.
+
+7. Next.js offers more flexible integration of third-party libraries, databases, and APIs, while Gatsby.js provides built-in plugins that can be limiting for custom or complex functionality.
+
+## Project Features
+
+- **Next.js:** Utilizes a powerful React framework for building dynamic and performant web applications with support for both static and server-side rendering.
+
+- **Tailwind CSS:** Implements a utility-first CSS framework for rapid UI development, allowing for customizable and responsive designs.
+
+- **TypeScript Support:** Provides strong typing and enhanced tooling for JavaScript, improving code quality and maintainability while reducing runtime errors through compile-time checks.
+
+- **TMDB Movie API:** Integrates with The Movie Database API to fetch and display trending movies and actor information dynamically.
+
+- **Incremental Static Regeneration (ISR):** Ensures that pages are updated in the background as new data becomes available without needing a full site rebuild.
+
+- **Google Analytics:** Tracks user interactions and provides insights into site performance and visitor behavior for data-driven decisions.
+
+- **Built-in API Routes:** Simplifies the creation and management of backend functionality within the application.
+
+- **Optimized Image Handling:** Uses Next.js's <Image> component for automatic image optimization and responsive loading, enhancing performance.
+
+- **SEO Optimization:** Implements best practices for search engine optimization, including meta tags and semantic HTML structure.
+
+- **Responsive Design:** Ensures a seamless user experience across various devices and screen sizes, enhancing accessibility.
+
+- **CI/CD Deployment:** Implements Continuous Integration and Continuous Deployment processes to automate testing and deployment, ensuring quick and reliable updates to the application with minimal manual intervention.
+
 ## Getting Started
 
 To get this project up and running on your local machine, follow these steps:
@@ -66,22 +111,14 @@ pnpm install
 bun install
 ```
 
-## Overview
-
-## Features
-
-## Getting Started
-
-To get started with this project, please refer to the [Setup Instructions](documentation/docs/setup.md).
-
 ## Documentation
 
 You can find detailed the documentation on this links:
 
-1. [Getting Started](documentation/setup.md)
-2. [Project Structure](documentation/project-structure.md)
-3. [Seo](documentation/seo.md)
-4. [Accessibility](documentation/accessibility.md)
+1. [Getting Started](documentation/setup.md) {:target="_blank"}
+2. [Project Structure](documentation/project-structure.md){:target="_blank"}
+3. [Seo](documentation/seo.md){:target="_blank"}
+4. [Accessibility](documentation/accessibility.md){:target="_blank"}
 
 However, please read on for an overview before diving deeper into the documentation.
 
@@ -201,7 +238,7 @@ The website leverages semantic HTML to enhance both accessibility and SEO. Seman
 | **H3**        | Travelling                               |
 ```
 
-Review the detailed steps implemented to enhance the page's SEO. [Read Complete Seo Documentation](documentation/seo.md)
+Review the detailed steps implemented to enhance the page's SEO. [Read Complete Seo Documentation](documentation/seo.md){:target="_blank"}
 
 ### 3. Codebase Organization, Modularity, and Maintainability
 
@@ -257,7 +294,7 @@ Every piece of code is commented for clarity
 
 Code version and history is managed with Github. Scroll to github section.
 
-For in depth details on the Project structure [Read Here](documentation/project-structure.md)
+For in depth details on the Project structure [Read Here](documentation/project-structure.md){:target="_blank"}
 
 ### 4. SEO Meta Tags and Schema Markup
 
@@ -279,7 +316,7 @@ Additionally, you can check the detailed results for Open Graph tags to ensure t
 
 This website also includes a sitemap.xml and robots.txt file
 
-For a full detailed seo report [Click Here](documentation/seo.md)
+For a full detailed seo report [Click Here](documentation/seo.md){:target="_blank"}
 
 ### 5. Accessibility Standards
 
@@ -291,14 +328,14 @@ This website is enabled for accesibilty. Some of the measures taken include:
 
 Two tools were used to test accessibility. This are:
 
-1. https://www.accessibilitychecker.org/ find the test result [here](https://www.accessibilitychecker.org/audit/?website=https%3A%2F%2Fnextjs-tech.vercel.app%2F&flag=ww)
-2. Accessibility Insights For Chrome. You can download it [here](https://accessibilityinsights.io/downloads/) and run the manual tests.
+1. https://www.accessibilitychecker.org/ find the test result [here](https://www.accessibilitychecker.org/audit/?website=https%3A%2F%2Fnextjs-tech.vercel.app%2F&flag=ww){:target="_blank"}
+2. Accessibility Insights For Chrome. You can download it [here](https://accessibilityinsights.io/downloads/){:target="_blank"} and run the manual tests.
 
-As a result the website scores very high on accessibility for For a detailed audit report on acccesibility. [Click Here](documentation/accessibility.md)
+As a result the website scores very high on accessibility for For a detailed audit report on acccesibility. [Click Here](documentation/accessibility.md){:target="_blank"}
 
 ### 6. Github & Application Deployment
 
-The website is deployed [Here] (https://nextjs-tech.vercel.app/)
+The website is deployed [Here] (https://nextjs-tech.vercel.app/){:target="_blank"}
 
 In GitHub, I chose to use two branches: staging and main. While I would typically opt for a separate branch for each feature in a team setting, working on this project alone allowed me to simplify the process with just these two branches, minimizing unnecessary switches. Each GitHub commit includes a title that summarizes the general changes, along with comments that detail specific modifications.
 
@@ -374,5 +411,57 @@ jobs:
 ```
 
 ### 6. Google Tag Manager & Google Analytics
+
+This sites makes use of a Google analytics. The code is hosted in a GoogleAnalytics Component and imported on layout.tsx:
+
+```
+"use client";
+import React from 'react'
+// Google Analytic Logic
+import { useEffect } from 'react';
+import Script from 'next/script'; // Correct import for Script
+import { usePathname } from 'next/navigation'; // Use usePathname to track page changes
+
+const GoogleAnalytics = () => {
+  const pathname = usePathname(); // Get the current pathname
+
+  useEffect(() => {
+    // Log the initial page view
+    window.gtag('config', 'G-4CF355VYVN', {
+      page_path: pathname,
+    });
+  }, [pathname]); // Run effect when pathname changes
+  return (
+    <div>
+      {/* Google Analytics Setup */}
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-4CF355VYVN`}
+      />
+      <Script
+        id="ga-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-4CF355VYVN', {
+                page_path: window.location.pathname,
+              });
+            `,
+        }}
+      />
+    </div>
+  )
+}
+
+export default GoogleAnalytics
+
+
+```
+
+It track visits to the homepage.
 
 ### 8. Page Speed Insights or Lighthouse Report
