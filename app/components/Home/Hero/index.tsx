@@ -20,7 +20,7 @@ const Hero = () => {
                   tabIndex={0}
                   layout="fill"
                   objectFit="cover"
-                  objectPosition="top"
+                  objectPosition="top left"
                   quality={100}
                   priority // This tells Next.js to load the image eagerly
                 />
