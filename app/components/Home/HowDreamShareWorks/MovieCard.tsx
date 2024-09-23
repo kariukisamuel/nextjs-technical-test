@@ -28,7 +28,7 @@ const MovieCard = ({
       {/* Image */}
       <Image
         // Construct the image URL using TMDB image path prefix
-        src={`https://image.tmdb.org/t/p/w500${imageUrl}`}
+        src={`https://image.tmdb.org/t/p/w300${imageUrl}`}
         role="img"
         alt={title}
         layout="fill"
