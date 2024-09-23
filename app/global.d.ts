@@ -1,7 +1,6 @@
-// app/global.d.ts
 declare global {
     interface Window {
-      gtag: (...args: any[]) => void; // Declare gtag function
+      gtag: (action: string, ...args: (string | number | object)[]) => void; // Specify more precise types
     }
   }
   
