@@ -316,6 +316,14 @@ The configuration file for TypeScript, defining compiler options and settings li
 │   ├── page.tsx
 │   ├── robots.ts
 │   └── sitemap.ts
+
+├── common/
+│   ├── accessibility.md
+│   ├── project-structure.md
+│   ├─  seo.md
+│   ├── setup.md
+│   ├─  desktop.jpg
+│   ├─  mobile.jpg
 ├── public/
 │   └── images/
 |       |
