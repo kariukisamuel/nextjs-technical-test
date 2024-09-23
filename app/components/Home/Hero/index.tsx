@@ -5,7 +5,7 @@ const Hero = () => {
   // Return the JSX structure for rendering the hero section
   return (
     <section id="hero" aria-labelledby="hero-heading">
-      <div className="relative bg-gradient-to-r from-blazingRed  to-blazingYellow h-[85vh]">
+      <div className="relative bg-gradient-to-r from-blazingRed  to-blazingYellow h-[90vh] sm:h-[85vh]">
         <div className="h-full">
           <div className="absolute inset-0">
             <div className="relative w-full h-full">
@@ -32,13 +32,13 @@ const Hero = () => {
             {/* Render the hero section title with appropriate styling */}
             <h1
               id="hero-heading"
-              className="text-3xl md:text-5xl text-white uppercase  font-bold leading-normal mb-4 font-montserrat"
+              className="text-2xl md:text-3xl lg:text-4xl text-white uppercase  font-bold leading-tight mb-4 font-montserrat"
             >
               Share Your <br></br>
               Holiday Dream
             </h1>
             {/* Render the hero section description with appropriate styling */}
-            <p className="text-xl md:text-2xl text-lightAlmond mb-8 font-roboto ">
+            <p className="text-xl lg:text-2xl text-lightAlmond mb-8 font-roboto ">
               And find the perfect partner to fulfill it.
             </p>
             {/* Render a button with a call to action */}
@@ -46,7 +46,7 @@ const Hero = () => {
               href="#meet-a-partner"
               aria-label="Meet a partner for your best holiday"
               role="button"
-              className="bg-blazingRed text-white  py-2 px-6 rounded-full text-lg font-bold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+              className="bg-blazingRed text-white py-2 px-6 rounded-full text-sm lg:text-base font-bold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
             >
               Find your holiday partner
             </a>

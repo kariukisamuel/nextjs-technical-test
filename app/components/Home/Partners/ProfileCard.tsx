@@ -12,7 +12,7 @@ type ProfileCardProps = {
 const ProfileCard = ({ imageUrl, name, knownFor }: ProfileCardProps) => (
   <div
     className="w-full sm:w-[50%] lg:w-[23.5%] 
-    mb-10 relative py-2 transition-all duration-300 
+    mb-10 relative py-1 transition-all duration-300 
     ease-in-out hover:rounded-md hover:border-1
   hover:border-gray-300 hover:shadow-lg 
     focus:outline-none focus:ring-2 focus:ring-blazingRed focus:rounded-md "
