@@ -1,5 +1,5 @@
 // Import the `Image` component from `next/image` for optimized image handling
-import Image from "next/image";
+import Image from "next/legacy/image";
 // Define the type of available width variants
 type WidthVariants = {
   sm: string;

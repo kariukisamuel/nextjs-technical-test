@@ -514,10 +514,17 @@ On all metrics the website performs well except LCP.A deep dive into LCP metrics
 Kindly check the summary results below:
 
 Mobile:
-![Mobile Results Image](https://github.com/kariukisamuel/nextjs-technical-test/blob/staging/documentation/mobile.jpg)
+
+![Mobile Results Image](https://github.com/kariukisamuel/nextjs-technical-test/blob/staging/documentation/mobile-1.jpg)
+
+![Mobile Results Image](https://github.com/kariukisamuel/nextjs-technical-test/blob/staging/documentation/mobile-2.jpg)
 
 Desktop:
-![Desktop Results Image](https://github.com/kariukisamuel/nextjs-technical-test/raw/staging/documentation/desktop.jpg)
+
+![Desktop Results Image](https://github.com/kariukisamuel/nextjs-technical-test/raw/staging/documentation/desktop-1.jpg)
+
+![Desktop Results Image](https://github.com/kariukisamuel/nextjs-technical-test/raw/staging/documentation/desktop-2.jpg)
+
 
 You can also test via this link https://pagespeed.web.dev/analysis/https-nextjs-tech-vercel-app/hvqjnsegux?form_factor=mobile
 

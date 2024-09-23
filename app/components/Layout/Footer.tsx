@@ -1,5 +1,5 @@
 // Import the Image component from Next.js
-import Image from "next/image";
+import Image from "next/legacy/image";
 // Import Footer Link Conponent
 import FooterLink from "./FooterLink";
 

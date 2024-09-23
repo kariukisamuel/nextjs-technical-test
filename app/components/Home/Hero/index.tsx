@@ -1,5 +1,5 @@
 // Import the `Image` component from `next/image` for optimized image handling
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const Hero = () => {
   // Return the JSX structure for rendering the hero section
@@ -20,7 +20,7 @@ const Hero = () => {
                   tabIndex={0}
                   layout="fill"
                   objectFit="cover"
-                  objectPosition="top left"
+                  objectPosition="center"
                   quality={100}
                   priority // This tells Next.js to load the image eagerly
                 />
@@ -33,7 +33,7 @@ const Hero = () => {
             {/* Render the hero section title with appropriate styling */}
             <h1
               id="hero-heading"
-              className="text-2xl sm-md:text-3xl lg:text-4xl text-white uppercase  font-bold leading-tight mb-4 font-montserrat"
+              className="text-2xl sm-md:text-3xl lg:text-5xl text-white uppercase  font-bold leading-tight mb-4 font-montserrat"
             >
               Share Your <br></br>
               Holiday Dream
