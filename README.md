@@ -331,7 +331,7 @@ Two tools were used to test accessibility. This are:
 1. https://www.accessibilitychecker.org/ find the test result [here](https://www.accessibilitychecker.org/audit/?website=https%3A%2F%2Fnextjs-tech.vercel.app%2F&flag=ww)
 2. Accessibility Insights For Chrome. You can download it [here](https://accessibilityinsights.io/downloads/) and run the manual tests.
 
-As a result the website scores very high on accessibility for For a detailed audit report on acccesibility. [Click Here](documentation/accessibility.md)
+As a result the website scores very high on accessibility. For a detailed audit report on acccesibility. [Click Here](documentation/accessibility.md)
 
 ### 6. Github & Application Deployment
 
@@ -474,22 +474,42 @@ It track visits to the homepage.
 
 The app performs well in pagespeed insight with some room for improvement. Key metrics are as follows:
 
+**1. Mobile**
 | Metric                      | Value  |
 |-----------------------------|--------|
 | First Contentful Paint      | 1.0 s  |
-| Largest Contentful Paint    | 3.3 s  |
-| Total Blocking Time         | 130 ms |
+| Largest Contentful Paint    | 2.8 s  |
+| Total Blocking Time         | 170 ms |
 | Cumulative Layout Shift     | 0      |
-| Speed Index                 | 1.0 s  |
+| Speed Index                 | 1.2 s  |
+
+**2. Desktop**
+| Metric                      | Value  |
+|-----------------------------|--------|
+| First Contentful Paint      | 0.3 s  |
+| Largest Contentful Paint    | 0.6 s  |
+| Total Blocking Time         |   0 ms |
+| Cumulative Layout Shift     |   0 s  |
+| Speed Index                 | 0.6 s  |
 
 On all metrics the website performs well except LCP.A deep dive into LCP metrics is as follows:
 
+**1. Mobile**
 | Phase         | % of LCP | Timing   |
 |---------------|----------|----------|
-| TTFB          | 18%      | 600 ms   |
-| Load Delay    | 6%       | 200 ms   |
-| Load Time     | 42%      | 1,390 ms |
-| Render Delay   | 34%      | 1,110 ms |
+| TTFB          | 21%      | 600 ms   |
+| Load Delay    | 24%       | 200 ms   |
+| Load Time     | 38%      | 1,390 ms |
+| Render Delay  | 17%      | 1,110 ms |
+
+**2. Desktop**
+| Phase         | % of LCP | Timing   |
+|---------------|----------|----------|
+| TTFB          | N/A      | N/A      |
+| Load Delay    | N/A      | N/A      |
+| Load Time     | N/A      | N/A      |
+| Render Delay  | N/A      | N/A      |
+
 
 Kindly check the summary results below:
 
