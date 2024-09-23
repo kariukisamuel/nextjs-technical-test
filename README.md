@@ -115,10 +115,10 @@ bun install
 
 You can find detailed the documentation on this links:
 
-1. [Getting Started](documentation/setup.md) {:target="_blank"}
-2. [Project Structure](documentation/project-structure.md){:target="_blank"}
-3. [Seo](documentation/seo.md){:target="_blank"}
-4. [Accessibility](documentation/accessibility.md){:target="_blank"}
+1. [Getting Started](documentation/setup.md) 
+2. [Project Structure](documentation/project-structure.md)
+3. [Seo](documentation/seo.md)
+4. [Accessibility](documentation/accessibility.md)
 
 However, please read on for an overview before diving deeper into the documentation.
 
@@ -238,7 +238,7 @@ The website leverages semantic HTML to enhance both accessibility and SEO. Seman
 | **H3**        | Travelling                               |
 ```
 
-Review the detailed steps implemented to enhance the page's SEO. [Read Complete Seo Documentation](documentation/seo.md){:target="_blank"}
+Review the detailed steps implemented to enhance the page's SEO. [Read Complete Seo Documentation](documentation/seo.md)
 
 ### 3. Codebase Organization, Modularity, and Maintainability
 
@@ -294,7 +294,7 @@ Every piece of code is commented for clarity
 
 Code version and history is managed with Github. Scroll to github section.
 
-For in depth details on the Project structure [Read Here](documentation/project-structure.md){:target="_blank"}
+For in depth details on the Project structure [Read Here](documentation/project-structure.md)
 
 ### 4. SEO Meta Tags and Schema Markup
 
@@ -316,7 +316,7 @@ Additionally, you can check the detailed results for Open Graph tags to ensure t
 
 This website also includes a sitemap.xml and robots.txt file
 
-For a full detailed seo report [Click Here](documentation/seo.md){:target="_blank"}
+For a full detailed seo report [Click Here](documentation/seo.md)
 
 ### 5. Accessibility Standards
 
@@ -328,14 +328,14 @@ This website is enabled for accesibilty. Some of the measures taken include:
 
 Two tools were used to test accessibility. This are:
 
-1. https://www.accessibilitychecker.org/ find the test result [here](https://www.accessibilitychecker.org/audit/?website=https%3A%2F%2Fnextjs-tech.vercel.app%2F&flag=ww){:target="_blank"}
-2. Accessibility Insights For Chrome. You can download it [here](https://accessibilityinsights.io/downloads/){:target="_blank"} and run the manual tests.
+1. https://www.accessibilitychecker.org/ find the test result [here](https://www.accessibilitychecker.org/audit/?website=https%3A%2F%2Fnextjs-tech.vercel.app%2F&flag=ww)
+2. Accessibility Insights For Chrome. You can download it [here](https://accessibilityinsights.io/downloads/) and run the manual tests.
 
-As a result the website scores very high on accessibility for For a detailed audit report on acccesibility. [Click Here](documentation/accessibility.md){:target="_blank"}
+As a result the website scores very high on accessibility for For a detailed audit report on acccesibility. [Click Here](documentation/accessibility.md)
 
 ### 6. Github & Application Deployment
 
-The website is deployed [Here] (https://nextjs-tech.vercel.app/){:target="_blank"}
+The website is deployed [Here] (https://nextjs-tech.vercel.app/)
 
 In GitHub, I chose to use two branches: staging and main. While I would typically opt for a separate branch for each feature in a team setting, working on this project alone allowed me to simplify the process with just these two branches, minimizing unnecessary switches. Each GitHub commit includes a title that summarizes the general changes, along with comments that detail specific modifications.
 
@@ -412,7 +412,7 @@ jobs:
 
 ### 6. Google Tag Manager & Google Analytics
 
-This sites makes use of a Google analytics. The code is hosted in a GoogleAnalytics Component and imported on layout.tsx:
+This site utilizes Google Analytics, with the tracking code encapsulated in a GoogleAnalytics component that is imported into layout.tsx
 
 ```
 "use client";
