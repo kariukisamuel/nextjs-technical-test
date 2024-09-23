@@ -7,39 +7,3 @@
 /* Import TailwindCSS utility styles */
 @tailwind utilities;
 
-/* Define keyframes for fade-up effect */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px); /* Start from below */
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0); /* End at normal position */
-  }
-}
-
-/* Animate the header */
-.header {
-  opacity: 0;
-  animation: fadeUp 2s ease-out forwards;
-}
-
-/* Animate the sub-header with delay */
-.sub-header {
-  opacity: 0;
-  animation: fadeUp 1.5s ease-out forwards;
-  animation-delay: 1s; /* Delay for staggered effect */
-}
-
-/* Animate the third element (button) with more delay */
-.hero-button {
-  opacity: 0;
-  animation: fadeUp 1.5s ease-out forwards;
-  animation-delay: 1.5s; /* Slight delay after sub-header */
-}
-
-.fade-up {
-  opacity: 0;
-  animation: fadeUp 2s ease-out forwards;
-}
