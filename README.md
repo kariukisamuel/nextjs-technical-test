@@ -465,3 +465,39 @@ export default GoogleAnalytics
 It track visits to the homepage.
 
 ### 8. Page Speed Insights or Lighthouse Report
+
+The app performs well in pagespeed insight with some room for improvement. Key metrics are as follows:
+
+| Metric                      | Value  |
+|-----------------------------|--------|
+| First Contentful Paint      | 1.0 s  |
+| Largest Contentful Paint    | 3.3 s  |
+| Total Blocking Time         | 130 ms |
+| Cumulative Layout Shift     | 0      |
+| Speed Index                 | 1.0 s  |
+
+On all metrics the website performs well except LCP.A deep dive into LCP metrics is as follows:
+
+| Phase         | % of LCP | Timing   |
+|---------------|----------|----------|
+| TTFB          | 18%      | 600 ms   |
+| Load Delay    | 6%       | 200 ms   |
+| Load Time     | 42%      | 1,390 ms |
+| Render Delay   | 34%      | 1,110 ms |
+
+Kindly check the summary results below:
+
+Mobile:
+![Mobile Results Image](https://github.com/kariukisamuel/nextjs-technical-test/blob/staging/documentation/mobile.jpg)
+
+Desktop:
+![Desktop Results Image](https://github.com/kariukisamuel/nextjs-technical-test/raw/staging/documentation/desktop.jpg)
+
+You can also test via this link https://pagespeed.web.dev/analysis/https-nextjs-tech-vercel-app/hvqjnsegux?form_factor=mobile
+
+### 8. What can be improved? 
+
+A good LCP is below  2.5 seconds for this application it stands at 3.3 seconds. This are the measures i would undertake to improve performance:
+
+1. Use a CDN to deliver static assets such as the background image from a Content Delivery Network (CDN) to reduce latency and load times.
+2.  Keep tweaking server configurations for optimal performance or shift to a faster web server
