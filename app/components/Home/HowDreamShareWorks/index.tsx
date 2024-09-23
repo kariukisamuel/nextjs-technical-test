@@ -42,16 +42,15 @@ const HowDreamshareWorks = async () => {
           <div className="w-full flex flex-col md:flex-row justify-between">
 
             {Array.from({ length: 3 }, (_, index) => (
-              <div className="w-full sm:w-[50%] md:w-[50%] lg:w-[23.5%]">
+              <div className="w-full sm:w-[50%] md:w-[50%] lg:w-[23.5%]" key={index}>
                 <div className="flex justify-center my-5">
                   <SkeletonLoader
-                    key={index}
                     width="w-[128px]"
                     height="h-[128px]"
                     circular
                   />
                 </div>
-                <SkeletonLoader  key={index} width="w-full" height="h-[128px]" />
+                <SkeletonLoader width="w-full" height="h-[128px]" />
               </div>
             ))}
 
