@@ -1,4 +1,6 @@
 import { Suspense } from "react";
+// Import necessary components and functions
+
 import AnchorSection from "../../Common/AnchorSection";
 import MovieProfile from "./MovieProfile.client";
 import SkeletonLoader from "../../Common/SkeletonLoader";
@@ -49,7 +51,7 @@ const HowDreamshareWorks = async () => {
                     circular
                   />
                 </div>
-                <SkeletonLoader width="w-full" height="h-[128px]" />
+                <SkeletonLoader  key={index} width="w-full" height="h-[128px]" />
               </div>
             ))}
 

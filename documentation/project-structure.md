@@ -125,11 +125,13 @@ This nested structure helps organize components related to specific sections of 
 │   │   │   │   └── index.tsx
 │   │   │   ├── HowDreamShareWorks/
 │   │   │   │   ├── index.tsx
-│   │   │   │   └── StepCard.tsx
+│   │   │   │   └── MovieCard.tsx
+│   │   │   │   └── MovieProfile.client.tsx
 │   │   │   ├── MeetAPartnerForm/
 │   │   │   │   └── index.tsx
 │   │   │   └── Partners/
 │   │   │       ├── index.tsx
+│   │   │       └── PartnerProfile.tsx
 │   │   │       └── ProfileCard.tsx
 ```
 
@@ -177,7 +179,7 @@ This file defines the overall layout or structure of the application, possibly i
 
 #### page.tsx
 
-This file might is the main entry point or landing page of your application. To create a new page create a folder with the name of the route. The folder name will correspond to the route URL.
+This file is the main entry point of the application. To create a new page create a folder with the name of the route. The folder name will correspond to the route URL.
 For example, if you want to create a route for /about, create an app/about/ folder.Inside the newly created folder, add a page.tsx file. This file will be rendered when the user navigates to the corresponding route. In the page.tsx file, export a function as the default component that returns the JSX for the page. You can dynamically display the route name if you wish
 
 ```
@@ -280,11 +282,10 @@ The configuration file for TypeScript, defining compiler options and settings li
 │   └── main.yml
 ├── app/
 │   ├── api/
-│   │   └── fetch-movies-actors.ts
+│   │   └── movies-actors.ts
 │   ├── components/
 │   │   ├── common/
 │   │   │   ├── AnchorSection.tsx
-│   │   │   ├── FooterLink.tsx
 │   │   │   ├── Modal.tsx
 │   │   │   └── SkeletonLoader.tsx
 │   │   ├── Home/
@@ -295,15 +296,18 @@ The configuration file for TypeScript, defining compiler options and settings li
 │   │   │   │   └── index.tsx
 │   │   │   ├── HowDreamShareWorks/
 │   │   │   │   ├── index.tsx
-│   │   │   │   └── StepCard.tsx
+│   │   │   │   └── MovieCard.tsx
+│   │   │   │   └── MovieProfile.client.tsx
 │   │   │   ├── MeetAPartnerForm/
 │   │   │   │   └── index.tsx
 │   │   │   └── Partners/
 │   │   │       ├── index.tsx
+│   │   │       └── PartnerProfile.tsx
 │   │   │       └── ProfileCard.tsx
 │   │   └── Layout/
 │   │       ├── Header.tsx
 │   │       └── Footer.tsx
+│   │       └── FooterLink.tsx
 │   ├── utils/
 │   │   └── font.ts
 │   ├── favicon.ico

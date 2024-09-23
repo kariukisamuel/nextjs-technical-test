@@ -3,7 +3,7 @@
 // Import necessary components and functions
 import { useState, useRef } from "react";
 import MovieCard from "./MovieCard";
-import AnchorSection from "../../Common/AnchorSection";
+
 
 // Define an interface for the movie data structure
 interface Movie {
@@ -49,7 +49,7 @@ const MovieProfile = ({ movies }: Props) => {
     <>
       <div className="flex justify-between mt-10 flex-wrap">
         {
-          //Iterate over the `visibleMovies` array and render `StepCard` components for each movie
+          //Iterate over the `visibleMovies` array and render `MovieCard` components for each movie
           visibleMovies.map((movie, index) => (
             <MovieCard
               key={movie.id}

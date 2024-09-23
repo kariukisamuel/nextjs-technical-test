@@ -1,6 +1,5 @@
 // This is a server component data is statically generated on build
 // Import necessary components and functions
-import React, { useState } from "react";
 import { Suspense } from "react";
 import AnchorSection from "../../Common/AnchorSection";
 import PartnerProfile from "./PartnerProfile";
