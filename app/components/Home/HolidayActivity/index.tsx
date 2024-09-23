@@ -25,7 +25,7 @@ const HolidayActivity = () => {
         <ActivityCard
           width="sm"
           image="/images/home/activities/wellness.webp"
-          fallBackImage="/images/home/activities/wellness.png"
+          fallBackImage="/images/home/activities/wellness.webp"
           title="Wellness and Health"
           backgroundPosition="center"
         />
