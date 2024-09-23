@@ -46,7 +46,8 @@ bun install
 
 ```
 TMDB_API_URL=https://api.themoviedb.org/3/
-TMDB_API_SECRET_KEY={your_key}
+TMDB_API_SECRET_KEY={replace_with_your_key}
+NEXT_PUBLIC_API_BASE_URL={replace_with_your_website_domain}
 ```
 
 4. After setting up spin up the development server

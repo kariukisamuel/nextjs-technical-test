@@ -91,7 +91,7 @@ pnpm install
 bun install
 ```
 
-3. Create an .env.local file to and create two variable namely(You may need to create a TMDB account if you dont have one already):
+3. Create an .env.local file to and create three variable namely(You may need to create a TMDB account if you dont have one already):
 
 ```
 TMDB_API_URL=https://api.themoviedb.org/3/
@@ -335,20 +335,24 @@ As a result the website scores very high on accessibility for For a detailed aud
 
 ### 6. Github & Application Deployment
 
-The website is deployed [Here] (https://nextjs-tech.vercel.app/)
+The website is deployed at [https://nextjs-tech.vercel.app/](https://nextjs-tech.vercel.app/)
 
-In GitHub, I chose to use two branches: staging and main. While I would typically opt for a separate branch for each feature in a team setting, working on this project alone allowed me to simplify the process with just these two branches, minimizing unnecessary switches. Each GitHub commit includes a title that summarizes the general changes, along with comments that detail specific modifications.
+In GitHub, I chose to use two branches: 
+- `staging` 
+- `main`. 
 
-The application is deployed on Vercel, which is also the creator of the Next.js framework. I utilize GitHub Actions to automate the deployment process, resulting in a CI/CD workflow. The application is deployed to two environments: staging and production. When a pull request is made to the main branch, the staging environment is updated, while merging the pull request deploys the app to production.
+While I would typically opt for a separate branch for each feature in a team setting, working on this project alone allowed me to simplify the process with just these two branches, minimizing unnecessary switches. Each GitHub commit includes a title that summarizes the general changes, along with comments that detail specific modifications.
 
-The confidential variables, like API-KEY, are stored in GitHub Secrets and Vercel Environment Variables. This setup allows for seamless continuous deployment since the .env.local file is not pushed to GitHub.
+The application is deployed on Vercel, which is also the creator of the Next.js framework. I utilize GitHub Actions to automate the deployment process, resulting in a CI/CD workflow. The application is deployed to two environments: staging and production. When a pull request is made to the `main` branch, the staging environment is updated, while merging the pull request deploys the app to production.
 
-The workflow file that manages this automation can be found in the .github/workflows/main.yml directory."
+The confidential variables, like `API-KEY`, are stored in GitHub Secrets and Vercel Environment Variables. This setup allows for seamless continuous deployment since the `.env.local` file is not pushed to GitHub.
+
+The workflow file that manages this automation can be found in the `.github/workflows/main.yml` directory.
 
 Here is a sample of the workflow file that defines jobs and events:
 
 ```
-name: WFD Dreamshare Vercel Deployment
+name: Vercel Deployment
 
 env:
   # Environment variables for Vercel organization and project IDs
@@ -412,7 +416,9 @@ jobs:
 
 ### 6. Google Tag Manager & Google Analytics
 
-This site utilizes Google Analytics, with the tracking code encapsulated in a GoogleAnalytics component that is imported into layout.tsx
+This site utilizes Google Analytics, with the tracking code encapsulated in a GoogleAnalytics component that is imported into layout.tsx.It track visits to the homepage.
+
+Here is the code for the `GoogleAnalytics` component:
 
 ```
 "use client";
@@ -497,7 +503,7 @@ You can also test via this link https://pagespeed.web.dev/analysis/https-nextjs-
 
 ### 8. What can be improved? 
 
-A good LCP is below  2.5 seconds for this application it stands at 3.3 seconds. This are the measures i would undertake to improve performance:
+A good LCP is below  2.5 seconds, for this application it stands at 3.3 seconds. This are the measures i would undertake to improve performance:
 
 1. Use a CDN to deliver static assets such as the background image from a Content Delivery Network (CDN) to reduce latency and load times.
 2.  Keep tweaking server configurations for optimal performance or shift to a faster web server
