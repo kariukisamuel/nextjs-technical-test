@@ -1,20 +1,20 @@
 // Import the `Image` component from `next/image` for optimized image handling
 import Image from "next/image";
-// Define the type of props accepted by the `StepCard` component
-type StepCardProps = {
+// Define the type of props accepted by the `MovieCard` component
+type MovieCardProps = {
   imageUrl: string; // URL of the step card image
-  stepNumber: number; // Step number to display
+  trendingNumber: number; // Step number to display
   title: string; // Title of the step
   description: string; // Description of the step
 };
-// Create the functional component named `StepCard`
+// Create the functional component named `MovieCard`
 
-const StepCard = ({
+const MovieCard = ({
   imageUrl,
-  stepNumber,
+  trendingNumber,
   title,
   description,
-}: StepCardProps) => {
+}: MovieCardProps) => {
   // Return the JSX structure for rendering the step card
   return (
     <div
@@ -46,7 +46,7 @@ const StepCard = ({
       <div className="absolute bottom-0 p-5 z-10">
         <div className="h-20 pb-5 flex items-start">
           <p className="text-white uppercase text-xs font-montserrat font-light bg-blazingRed px-4 py-1 rounded-3xl">
-            Trending {`#${stepNumber}`}
+            Trending {`#${trendingNumber}`}
           </p>
         </div>
         <div className="card-body">
@@ -67,4 +67,4 @@ const StepCard = ({
     </div>
   );
 };
-export default StepCard;
+export default MovieCard;
