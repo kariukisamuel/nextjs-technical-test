@@ -7,13 +7,17 @@ import { usePathname } from 'next/navigation'; // Use usePathname to track page 
 
 const GoogleAnalytics = () => {
   const pathname = usePathname(); // Get the current pathname
-
   useEffect(() => {
-    // Log the initial page view
-    window.gtag('config', 'G-4CF355VYVN', {
-      page_path: pathname,
-    });
-  }, [pathname]); // Run effect when pathname changes
+    const handleGtag = () => {
+      if (window.gtag) {
+        window.gtag('config', 'G-4CF355VYVN', {
+          page_path: pathname,
+        });
+      }
+    };
+
+    handleGtag();
+  }, [pathname]);
   return (
     <div>
       {/* Google Analytics Setup */}
@@ -27,13 +31,13 @@ const GoogleAnalytics = () => {
         strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-4CF355VYVN', {
-                page_path: window.location.pathname,
-              });
-            `,
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-4CF355VYVN', {
+              page_path: window.location.pathname,
+            });
+          `,
         }}
       />
     </div>
