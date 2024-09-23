@@ -23,12 +23,12 @@ const GoogleAnalytics = () => {
       {/* Google Analytics Setup */}
       <Script
         id="google-analytics"
-        strategy="lazyOnload"
+        strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=G-4CF355VYVN`}
       />
       <Script
         id="ga-script"
-        strategy="lazyOnload"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
