@@ -56,7 +56,6 @@ const PartnerProfile = ({ actors, visibleActors }: Props) => {
         </button>
       </div>
       <Modal title="All Partners" isOpen={isModalOpen} onClose={closeModal}>
-
         <div className="flex flex-wrap m-5">
           {actors.map((actor) => (
             <ProfileCard
@@ -67,10 +66,8 @@ const PartnerProfile = ({ actors, visibleActors }: Props) => {
             />
           ))}
         </div>
-
       </Modal>
     </>
-
   );
 };
 

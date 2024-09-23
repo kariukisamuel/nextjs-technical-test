@@ -27,9 +27,12 @@ export async function fetchActors(limit: number): Promise<Actors[]> {
     throw new Error("API Base URL is not defined");
   }
   const filter = "actors";
-  const res = await fetch(`${baseUrl}/api/movies-actors?filter=${filter}&page=1`, {
-    next: { revalidate: 86400 }, // Revalidate once every 24 hours (86400 seconds)
-  });
+  const res = await fetch(
+    `${baseUrl}/api/movies-actors?filter=${filter}&page=1`,
+    {
+      next: { revalidate: 86400 }, // Revalidate once every 24 hours (86400 seconds)
+    },
+  );
   const result = await res.json();
   return result.slice(0, limit);
 }
@@ -45,8 +48,8 @@ export default async function Partners() {
       title="Meet a partner for your best holiday"
       ariaLabel="partner-heading"
     >
-      <Suspense fallback=
-        {
+      <Suspense
+        fallback={
           <div className="flex justify-between mt-10 flex-wrap">
             {Array.from({ length: 3 }, (_, index) => (
               <SkeletonLoader
@@ -55,13 +58,11 @@ export default async function Partners() {
                 height="h-[400px]"
               />
             ))}
-
           </div>
         }
       >
         <PartnerProfile actors={actors} visibleActors={visibleActors} />;
       </Suspense>
-
     </AnchorSection>
   );
 }

@@ -53,7 +53,7 @@ const Footer = () => {
         {/* Logo section */}
         <div className="w-full md:w-[10%] lg:w-[15%] mb-10 mt-5 relative flex flex-col items-center">
           <div className="">
-            <p className="font-montserrat font-bold uppercase text-slate-500text-xs">
+            <p className="font-montserrat font-bold uppercase text-slate-500 text-xs">
               Designed By
             </p>
           </div>
