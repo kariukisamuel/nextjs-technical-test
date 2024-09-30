@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactNode } from "react";
+import { ReactNode, forwardRef } from "react";
 
 type AnchorSectionProps = {
   id: string;
@@ -8,11 +8,13 @@ type AnchorSectionProps = {
   ariaLabel: string;
 };
 
-const AnchorSection = ({ id, title, children, ariaLabel }: AnchorSectionProps) => {
+const AnchorSection = forwardRef<HTMLDivElement, AnchorSectionProps>(
+  ({ id, title, children, ariaLabel }, ref) => {
     return (
       <section
         id={id}
         className="w-full pt-10"
+        ref={ref}
         aria-label={ariaLabel}
       >
         <div className="xs:w-[94%] lg:w-[70%] mx-auto">
@@ -28,7 +30,9 @@ const AnchorSection = ({ id, title, children, ariaLabel }: AnchorSectionProps) =
         </div>
       </section>
     );
-  }
+  },
+);
 
-
+// Add displayName for debugging purposes
+AnchorSection.displayName = "AnchorSection";
 export default AnchorSection;

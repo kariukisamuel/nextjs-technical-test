@@ -1,5 +1,5 @@
 // Import the `Image` component from `next/image` for optimized image handling
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 // Define the type of props accepted by the `ProfileCard` component
 type ProfileCardProps = {
@@ -37,7 +37,7 @@ const ProfileCard = ({ imageUrl, name, knownFor }: ProfileCardProps) => (
       <div className="absolute -bottom-5 right-0 z-10">
         <div className="bg-blazingRed border-4 border-white h-14 w-14 overflow-hidden rounded-full flex justify-center items-center">
           <Image
-            src="/images/home/partners/movie-svgrepo-com.svg"
+            src="images/home/partners/movie-svgrepo-com.svg"
             alt={name}
             objectPosition="center"
             quality={100}

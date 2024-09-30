@@ -1,7 +1,7 @@
 // // This line indicates that the component uses the client-side rendering approach (React)
 "use client";
 // Import necessary components and functions
-import { useState } from "react";
+import { useState, useRef } from "react";
 import MovieCard from "./MovieCard";
 
 // Define an interface for the movie data structure
@@ -21,6 +21,7 @@ const MovieProfile = ({ movies }: Props) => {
     movies.slice(0, 3),
   );
   const [count, setCount] = useState(3); // Number of movies to display initially
+  const sectionPopular = useRef<HTMLDivElement>(null); // Reference to the section element
 
   // Function to handle loading more movies
   const handleLoadMore = () => {
@@ -34,13 +35,12 @@ const MovieProfile = ({ movies }: Props) => {
     const newCount = Math.max(3, count - movies.length);
     setCount(newCount);
     setVisibleMovies(movies.slice(0, newCount));
-    scrollToSection(); // Scroll back to the section after loading less
+    scrollToSection(sectionPopular); // Scroll back to the section after loading less
   };
 
   // Function to scroll to a section using the provided reference
-  const scrollToSection = () => {
-    const section = document.getElementById("how-dreamshare-works");
-    section?.scrollIntoView({ behavior: "smooth" }); // Scroll smoothly
+  const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" }); // Scroll smoothly
   };
 
   // Return the JSX structure for rendering the section

@@ -5,13 +5,7 @@ const nextConfig = {
   // Configuration for handling images in Next.js
   images: {
     // Specifies allowed external domains for image optimization
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'image.tmdb.org',
-        pathname: '/**',
-      }, // Allow images to be loaded from this domain
-    ]
+    domains: ["image.tmdb.org"], // Allow images to be loaded from this domain
   },
 };
 
