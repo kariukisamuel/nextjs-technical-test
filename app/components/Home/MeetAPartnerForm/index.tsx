@@ -30,7 +30,7 @@ const MeetAPartnerForm = () => {
               <div className="w-full h-[48px] sm-md:w-[35%] md:w-[30%]">
                 <button
                   className="w-full h-full bg-blazingRed text-white py-2 px-6 rounded-full text-base sm-md:text-sm font-bold hover:shadow-lg"
-                  type="button"
+                  type="submit"
                 >
                   Search partners
                 </button>

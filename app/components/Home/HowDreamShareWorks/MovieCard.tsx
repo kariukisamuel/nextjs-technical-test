@@ -1,5 +1,5 @@
 // Import the `Image` component from `next/image` for optimized image handling
-import Image from "next/image";
+import Image from "next/legacy/image";
 // Define the type of props accepted by the `MovieCard` component
 type MovieCardProps = {
   imageUrl: string; // URL of the step card image
