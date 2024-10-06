@@ -37,7 +37,7 @@ const PartnerProfile = ({ actors, visibleActors }: Props) => {
 
   return (
     <>
-      <div className="flex justify-center mt-10 flex-wrap">
+      <div className="flex justify-between mt-10 flex-wrap">
         {visibleActors.map((actor) => (
           <ProfileCard
             key={actor.id}

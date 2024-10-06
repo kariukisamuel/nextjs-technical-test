@@ -14,7 +14,7 @@ const Hero = () => {
 
               <picture>
                 <Image
-                  src="/images/home/hero/hero.webp"
+                  src="/images/home/hero/partner-hero.webp"
                   alt="A scenic view of the beach"
                   role="img"
                   tabIndex={0}
@@ -24,7 +24,7 @@ const Hero = () => {
                   quality={100}
                   priority // This tells Next.js to load the image eagerly
                 />
-                <source srcSet="/images/home/hero/hero.jpg" type="image/jpeg" />
+                <source srcSet="/images/home/hero/view-point-hero.jpg" type="image/jpeg" />
               </picture>
             </div>
           </div>
