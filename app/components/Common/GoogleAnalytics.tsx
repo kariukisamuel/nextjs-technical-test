@@ -7,12 +7,17 @@ import { usePathname } from 'next/navigation'; // Use usePathname to track page 
 
 const GoogleAnalytics = () => {
   const pathname = usePathname(); // Get the current pathname
+  const gaCode = process.env.NEXT_PUBLIC_GA_CODE;
   useEffect(() => {
     const handleGtag = () => {
       if (window.gtag) {
-        window.gtag('config', 'G-4CF355VYVN', {
-          page_path: pathname,
-        });
+        if (gaCode) {
+          window.gtag('config', gaCode, {
+            page_path: pathname,
+          });
+        } else {
+          console.warn('GA Code is not defined');
+        }
       }
     };
 
