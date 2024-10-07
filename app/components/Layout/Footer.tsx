@@ -20,7 +20,7 @@ const Footer = () => {
   ];
   return (
     // Footer container with a border
-    <footer className="border-t-4 py-5 mt-10 border-blazingRed">
+    <footer className="border-t-4 py-5 mt-10 border-blazingRed" role="contentinfo">
       <div className="xs:w-[94%] lg:w-[70%] mx-auto flex justify-between flex-wrap">
         {/* Company information section */}
         <div className="w-full md:w-[25%] lg:w-[25%] mb-2 text-center md:text-left relative">
