@@ -15,7 +15,7 @@ const MeetAPartnerForm = () => {
         </p>
       </div>
       <div>
-        <form>
+        <form role="form">
           <div className="w-full  ">
             <div className="flex relative flex-wrap gap-2 md:gap-5 justify-center items-center py-4 mt-5 w-full xs:w-[100%] sm-md:w-[80%] md:w-[80%] lg:w-[70%] mx-auto">
               <div className="w-full h-[48px] sm-md:w-[55%] md:w-[60%]">

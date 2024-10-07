@@ -7,7 +7,6 @@ import tsParser from "@typescript-eslint/parser"; // TypeScript parser
 export default [
   {
     files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"], // Specify files directly here
-
     languageOptions: {
       parser: tsParser, // Set TypeScript parser
       globals: globals.browser, // Include browser globals like window, document
@@ -31,6 +30,7 @@ export default [
 
       // Custom rules can be added here if needed
       "react/react-in-jsx-scope": "off", // Turn off React in scope for JSX if using React 17+
+      "no-unused-vars": "warn"
     },
   },
 ];

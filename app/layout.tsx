@@ -1,3 +1,5 @@
+//
+import React from "react";
 // Import the Metadata type from Next.js
 import type { Metadata } from "next";
 // Import font variables from the utils file
@@ -6,6 +8,8 @@ import { montserrat, roboto } from "./utils/fonts";
 import "./globals.css";
 //import google nalytics component
 import GoogleAnalytics from "./components/Common/GoogleAnalytics";
+//import Schema component
+import SchemaMarkup from "./components/Common/SchemaMarkup";
 
 
 
@@ -78,6 +82,7 @@ export default function RootLayout({
   // Return the JSX structure for rendering the root layout
   return (
     <html lang="en">
+      <SchemaMarkup/>
       <body
         // Set the body element's width to 100%, background color to white, and overflow style to hidden
         className={`w-full bg-white overflow-hiddden ${montserrat} ${roboto}`}
