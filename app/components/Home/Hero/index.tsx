@@ -35,7 +35,7 @@ const Hero = () => {
               id="hero-heading"
               className="text-2xl sm-md:text-3xl lg:text-5xl text-white uppercase  font-bold leading-tight mb-4 font-montserrat"
             >
-              Share Your <br></br>
+              Share Your <br/>
               Holiday Dream
             </h1>
             {/* Render the hero section description with appropriate styling */}
