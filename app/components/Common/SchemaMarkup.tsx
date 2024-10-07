@@ -27,11 +27,11 @@ const SchemaMarkup = () => {
         ]
     };
     return (
-        <Head>
+      
             <script type="application/ld+json">
                 {JSON.stringify(schema)}
             </script>
-        </Head>
+        
     )
 }
 
