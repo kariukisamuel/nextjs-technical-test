@@ -1,5 +1,3 @@
-import Head from 'next/head';
-
 const SchemaMarkup = () => {
     const schema = {
         "@context": "https://schema.org/",

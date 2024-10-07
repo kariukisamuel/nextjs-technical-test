@@ -22,7 +22,7 @@ const GoogleAnalytics = () => {
     };
 
     handleGtag();
-  }, [pathname]);
+  }, [pathname,gaCode]);
   return (
     <div>
       {/* Google Analytics Setup */}
