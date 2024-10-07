@@ -82,13 +82,14 @@ export default function RootLayout({
   // Return the JSX structure for rendering the root layout
   return (
     <html lang="en">
-      <SchemaMarkup/>
+      
       <body
         // Set the body element's width to 100%, background color to white, and overflow style to hidden
         className={`w-full bg-white overflow-hiddden ${montserrat} ${roboto}`}
       >
         {/* Render the children content within the body element */}
         {children}
+        <SchemaMarkup/>
         <GoogleAnalytics />
       </body>
     </html>

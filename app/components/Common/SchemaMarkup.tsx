@@ -1,5 +1,3 @@
-import Head from 'next/head';
-
 const SchemaMarkup = () => {
     const schema = {
         "@context": "https://schema.org/",
@@ -27,11 +25,11 @@ const SchemaMarkup = () => {
         ]
     };
     return (
-        <Head>
-            <script type="application/ld+json">
-                {JSON.stringify(schema)}
-            </script>
-        </Head>
+
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
     )
 }
 
