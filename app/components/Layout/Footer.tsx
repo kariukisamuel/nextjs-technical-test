@@ -6,17 +6,17 @@ import FooterLink from "./FooterLink";
 // Create the Footer component
 const Footer = () => {
   const links = [
-    { id: 1, href: "/about", ariaLabel: "About Us Page", name: "About" },
-    { id: 2, href: "/contact", ariaLabel: "Contact Us Page", name: "Contact" },
-    { id: 3, href: "/press", ariaLabel: "Press Page", name: "Press" },
-    { id: 4, href: "/blog", ariaLabel: "Blog Page", name: "Blog" },
+    { id: 1, href: "#", ariaLabel: "About Us Page", name: "About" },
+    { id: 2, href: "#", ariaLabel: "Contact Us Page", name: "Contact" },
+    { id: 3, href: "#", ariaLabel: "Press Page", name: "Press" },
+    { id: 4, href: "#", ariaLabel: "Blog Page", name: "Blog" },
     {
       id: 5,
-      href: "/terms-and-privacy",
+      href: "#",
       ariaLabel: "Terms and Privacy Page",
       name: "Terms and Privacy",
     },
-    { id: 6, href: "/help", ariaLabel: "Help Page", name: "Help" },
+    { id: 6, href: "#", ariaLabel: "Help Page", name: "Help" },
   ];
   return (
     // Footer container with a border

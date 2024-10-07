@@ -13,6 +13,30 @@ const nextConfig = {
       }, // Allow images to be loaded from this domain
     ]
   },
+  async headers() {
+    return [
+      {
+        // Apply this header to all routes
+        source: '/(.*)', // Adjust if needed to target specific routes
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https://image.tmdb.org data:; object-src 'none'; frame-ancestors 'none';",
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY', // This value prevents the page from being displayed in a frame
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff', // Prevents the browser from MIME-sniffing
+          }
+        ],
+      },
+    ];
+  }
+
+
 };
 
 export default nextConfig; // Export the configuration object to be used by Next.js
