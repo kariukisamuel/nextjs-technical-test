@@ -15,7 +15,7 @@ const Hero = () => {
               <picture>
                 <Image
                   src="/images/home/hero/partner-hero.webp"
-                  alt="A scenic view of the beach"
+                  alt="Find a partner"
                   role="img"
                   tabIndex={0}
                   layout="fill"
