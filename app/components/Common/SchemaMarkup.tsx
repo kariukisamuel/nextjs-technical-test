@@ -2,7 +2,6 @@ const SchemaMarkup = () => {
     const schema = {
         "@context": "https://schema.org/",
         "@type": "Organization",
-        "@id": "#Organization",
         "url": "https://nextjs-tech.vercel.app/",
         "legalName": "Dreamshare",
         "name": "Dreamshare",
