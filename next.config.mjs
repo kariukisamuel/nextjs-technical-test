@@ -12,7 +12,7 @@
 // };
 
 
-const nonce = generateNonce();
+// const nonce = generateNonce();
 const nextConfig = {
   // Configuration for handling images in Next.js
   images: {
