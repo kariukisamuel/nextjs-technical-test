@@ -6,8 +6,9 @@ import Script from 'next/script'; // Correct import for Script
 import { usePathname } from 'next/navigation'; // Use usePathname to track page changes
 
 const GoogleAnalytics = () => {
+  
   const pathname = usePathname(); // Get the current pathname
-  const gaCode = process.env.NEXT_PUBLIC_GA_CODE;
+  const gaCode = process.env.NEXT_PUBLIC_GA_CODE || '';
   useEffect(() => {
     const handleGtag = () => {
       if (window.gtag) {
@@ -39,7 +40,7 @@ const GoogleAnalytics = () => {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', ${gaCode}, {
+            gtag('config','${gaCode.toString()}', {
               page_path: window.location.pathname,
             });
           `,
