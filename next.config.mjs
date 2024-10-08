@@ -11,6 +11,7 @@ const generateNonce = (length = 16) => {
   return nonce;
 };
 
+
 const nonce = generateNonce();
 const nextConfig = {
   // Configuration for handling images in Next.js
@@ -32,7 +33,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: `default-src 'self'; script-src 'self' 'nonce-${nonce}' https://www.googletagmanager.com; ...`,
+            value: `default-src 'self'; script-src 'self' 'nonce-${nonce}' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' https://image.tmdb.org data:; object-src 'none'; frame-ancestors 'none';`,
           },
           {
             key: 'X-Frame-Options',
