@@ -29,7 +29,7 @@ const GoogleAnalytics = () => {
       <Script
         id="google-analytics"
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-4CF355VYVN`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${gaCode}`}
       />
       <Script
         id="ga-script"
@@ -39,7 +39,7 @@ const GoogleAnalytics = () => {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-4CF355VYVN', {
+            gtag('config', ${gaCode}, {
               page_path: window.location.pathname,
             });
           `,
