@@ -5,7 +5,7 @@ const Hero = () => {
   // Return the JSX structure for rendering the hero section
   return (
     <section id="hero" aria-labelledby="hero-heading">
-      <div className="relative bg-gradient-to-r from-blazingRed  to-blazingYellow h-[90vh] sm:h-[85vh]">
+      <div className="relative bg-gradient-to-r from-blazingRed  to-blazingYellow h-[80vh]">
         <div className="h-full">
           <div className="absolute inset-0">
             <div className="relative w-full h-full">
